@@ -735,4 +735,233 @@ translator:
 
 ---
 
-**Claude Code 项目文档** | 声韵输入方案 | Generated: 2025-11-14
+## Lua Processor 自动键盘切换（v1.0.1开发中）
+
+### 问题背景
+
+v1.0.0 使用 Trime键盘配置的 `select` 属性实现键盘切换，但这要求手动点击切换按钮，需要4+次点击才能输入一个音节（ba需要：点声母→点切换按钮→点韵母→点切换按钮），违背了"两次输入"的设计初衷。
+
+### 解决方案：Lua Processor + `_keyboard_*` Option
+
+根据Trime源码分析（`KeyboardWindow.kt:onRimeOptionUpdated()`），Trime监听以 `_keyboard_` 开头的RIME option变化，自动切换键盘。
+
+**工作流程**：
+```
+用户按键 → Lua Processor拦截 → 分析输入状态 → 设置_keyboard_*选项 → Trime监听到option变化 → 自动切换键盘
+```
+
+### API文档（基于types.cc源码）
+
+#### KeyEvent 对象（types.cc:534-584行）
+
+**属性**：
+```lua
+key.keycode  -- int, 按键码（0x61-0x7a 表示 a-z）
+key.modifier -- int, 修饰键状态
+```
+
+**方法**（都用冒号调用）：
+```lua
+key:ctrl()     -- bool, 是否按下Ctrl
+key:alt()      -- bool, 是否按下Alt
+key:shift()    -- bool, 是否按下Shift
+key:release()  -- bool, 是否为按键释放事件
+key:caps()     -- bool, 是否CapsLock
+key:super()    -- bool, 是否Super/Win键
+key:repr()     -- string, 按键的字符串表示
+```
+
+**注意**：从switch.lua第21行看到 `key.ctrl()` 用点号调用，但types.cc第564行定义为方法，应该用冒号。经测试，**必须用冒号**。
+
+#### Context 对象（types.cc:747-822行）
+
+**属性**：
+```lua
+ctx.input      -- string, 当前输入码（只读）
+ctx.caret_pos  -- int, 光标位置
+```
+
+**方法**：
+```lua
+ctx:set_option(name, value)  -- 设置选项（键盘切换的关键）
+ctx:get_option(name)         -- 获取选项值
+ctx:clear()                  -- 清空输入
+ctx:commit()                 -- 上屏当前候选
+-- ... 其他方法见types.cc
+```
+
+**关键**：`ctx:set_option("_keyboard_shengyun_finals", true)` 会触发Trime切换到 `shengyun_finals` 键盘。
+
+#### Processor 返回值
+
+```lua
+local kRejected = 0  -- 拒绝处理，传递给下一个processor
+local kAccepted = 1  -- 接受并消费该按键
+local kNoop = 2      -- 不处理，继续传递
+```
+
+### Lua Processor 实现
+
+#### 文件：shengyun_keyboard_switcher.lua
+
+```lua
+local kNoop = 2
+
+-- 判断是否为声母
+local function is_shengmu(ch)
+  local shengmu = "bpmfdtnlgkhjqxzcsryw"
+  return string.find(shengmu, ch, 1, true) ~= nil
+end
+
+-- 判断是否为韵母
+local function is_yunmu(ch)
+  local yunmu = "aoeiuv"
+  return string.find(yunmu, ch, 1, true) ~= nil
+end
+
+-- 主处理函数
+local function processor_func(key, env)
+  -- 忽略按键释放和修饰键
+  if key:release() or key:ctrl() or key:alt() then
+    return kNoop
+  end
+
+  local ch_code = key.keycode
+
+  -- 只处理小写字母
+  if ch_code < 0x61 or ch_code > 0x7a then
+    return kNoop
+  end
+
+  local ch = string.char(ch_code)
+  local ctx = env.engine.context
+  local input = ctx.input
+  local len = string.len(input)  -- 使用string.len更兼容
+
+  -- 场景1: 编码区为空 + 输入声母 → 切换到韵母层
+  if len == 0 and is_shengmu(ch) then
+    ctx:set_option("_keyboard_shengyun_finals", true)
+    return kNoop
+  end
+
+  -- 场景2: 已有声母 + 输入韵母 → 切换回声母层
+  if len >= 1 and is_yunmu(ch) then
+    ctx:set_option("_keyboard_shengyun_initials", true)
+    return kNoop
+  end
+
+  return kNoop
+end
+
+-- 初始化函数
+local function processor_init(env)
+  env.engine.context:set_option("_keyboard_shengyun_initials", true)
+end
+
+-- 返回processor接口（函数名必须是processor_init和processor_func）
+return { init = processor_init, func = processor_func }
+```
+
+#### 配置文件修改
+
+**shengyun.schema.yaml**：
+```yaml
+engine:
+  processors:
+    - lua_processor@shengyun_keyboard_switcher  # 添加在最前面
+    - ascii_composer
+    - recognizer
+    # ...其他processors
+```
+
+**rime.lua**（注册Lua模块）：
+```lua
+shengyun_keyboard_switcher = require("shengyun_keyboard_switcher")
+```
+
+### 错误调试历史
+
+#### 错误1：`attempt to call a nil value` (2025-11-14)
+
+**日志**：
+```
+E/rime.trime: LuaProcessor::ProcessKeyEvent of shengyun_keyboard_switcher error(2): attempt to call a nil value
+```
+
+**原因分析**：
+1. 日志显示：`func type: nil - func type error expect function`
+2. 检查返回值：`return { init = init, func = func }` 中func字段为nil
+3. 多次尝试不同函数名（processor_func, switcher, func）均失败
+4. 验证设备上文件内容正确，但部署后仍报错
+5. **根本原因**：缓存问题或Lua模块加载机制问题
+
+**解决方案**：
+```lua
+-- 最终工作版本
+local kNoop = 2
+
+local function processor(key, env)
+  if key:release() or key:alt() then
+    return kNoop
+  end
+
+  local ctx = env.engine.context
+  local input = ctx.input
+
+  if input == "b" then
+    ctx:set_option("_keyboard_shengyun_finals", true)
+  end
+
+  return kNoop
+end
+
+local function init(env)
+  env.engine.context:set_option("_keyboard_shengyun_initials", true)
+end
+
+return { init = init, func = processor }
+```
+
+**关键步骤**：
+1. 强制停止trime进程：`adb shell am force-stop com.osfans.trime`
+2. 清除build缓存：`adb shell rm -rf /sdcard/rime/build/*`
+3. 重新推送并部署
+
+**教训**：
+- ❌ 不要基于猜测编程，必须查看实际源码和官方文档
+- ✅ 使用代理访问官方文档：https://rimeinn.github.io/plugin/lua/Objects.html
+- ✅ Context对象API：`ctx.input`（属性用点号），`ctx:set_option()`（方法用冒号）
+- ✅ KeyEvent对象API：`key:release()`, `key:alt()`（方法用冒号）
+- ✅ 遇到缓存问题时需要强制清除并重启
+- ✅ 参考工作示例：switch.lua第84行 `return { init = init, func = selector }`
+
+### 测试验证
+
+```bash
+# 1. 推送文件到设备
+adb push shengyun_keyboard_switcher.lua /sdcard/rime/
+adb push rime.lua /sdcard/rime/
+adb push shengyun.schema.yaml /sdcard/rime/
+
+# 2. 触发重新部署
+adb shell am broadcast -a com.osfans.trime.deploy
+
+# 3. 查看日志
+adb logcat | grep "rime.trime"
+
+# 4. 测试场景
+# - 输入声母 b → 自动切换到韵母层
+# - 输入韵母 a → 自动切换回声母层
+# - ba 完成，候选词显示"吧、把、爸"
+```
+
+### 参考资源
+
+- **Trime源码**: `app/src/main/java/.../KeyboardWindow.kt:onRimeOptionUpdated()`
+- **librime-lua API**: `app/src/main/jni/librime-lua/src/types.cc`
+- **工作示例**: `app/src/main/jni/librime-lua/sample/lua/switch.lua`
+- **官方Wiki**: https://github.com/hchunhui/librime-lua/wiki/Scripting
+
+---
+
+**Claude Code 项目文档** | 声韵输入方案 | Updated: 2025-11-14

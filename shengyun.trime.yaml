@@ -8,8 +8,6 @@ config_version: "3.0"
 name: 声韵输入法
 author: Shengyun IME for kindergarten children
 
-__include: trime.yaml
-
 # 儿童友好的配色方案
 preset_color_schemes:
   shengyun_kids:
@@ -31,7 +29,6 @@ preset_color_schemes:
 
 # 儿童友好的样式设置
 style:
-  __include: /style
   color_scheme: shengyun_kids
   candidate_text_size: 32                     # 大候选字号
   candidate_view_height: 40                   # 高候选区
@@ -53,34 +50,34 @@ preset_keyboards:
     height: 70
     lock: true
     keys:
-      # 第一行：常用声母 b p m f d t n l（纯拼音，自动切换到韵母层）
-      - {click: b, select: shengyun_finals, label: "b", long_click: "1", width: 12.5}
-      - {click: p, select: shengyun_finals, label: "p", long_click: "2", width: 12.5}
-      - {click: m, select: shengyun_finals, label: "m", long_click: "3", width: 12.5}
-      - {click: f, select: shengyun_finals, label: "f", long_click: "4", width: 12.5}
-      - {click: d, select: shengyun_finals, label: "d", long_click: "5", width: 12.5}
-      - {click: t, select: shengyun_finals, label: "t", long_click: "6", width: 12.5}
-      - {click: n, select: shengyun_finals, label: "n", long_click: "7", width: 12.5}
-      - {click: l, select: shengyun_finals, label: "l", long_click: "8", width: 12.5}
+      # 第一行：唇音 + 舌尖音 (b p m f d t n l)
+      - {click: b, label: "b", width: 12.5}
+      - {click: p, label: "p", width: 12.5}
+      - {click: m, label: "m", width: 12.5}
+      - {click: f, label: "f", width: 12.5}
+      - {click: d, label: "d", width: 12.5}
+      - {click: t, label: "t", width: 12.5}
+      - {click: n, label: "n", width: 12.5}
+      - {click: l, label: "l", width: 12.5}
 
-      # 第二行：常用声母 g k h j q x + 翘舌音（自动切换到韵母层）
-      - {click: g, select: shengyun_finals, label: "g", width: 11}
-      - {click: k, select: shengyun_finals, label: "k", width: 11}
-      - {click: h, select: shengyun_finals, label: "h", width: 11}
-      - {click: j, select: shengyun_finals, label: "j", width: 11}
-      - {click: q, select: shengyun_finals, label: "q", width: 11}
-      - {click: x, select: shengyun_finals, label: "x", width: 11}
-      - {click: zh, select: shengyun_finals, label: "zh", width: 13}
-      - {click: ch, select: shengyun_finals, label: "ch", width: 13}
+      # 第二行：舌根音 + 舌面音 + 半元音 (g k h j q x r y)
+      - {click: g, label: "g", width: 12.5}
+      - {click: k, label: "k", width: 12.5}
+      - {click: h, label: "h", width: 12.5}
+      - {click: j, label: "j", width: 12.5}
+      - {click: q, label: "q", width: 12.5}
+      - {click: x, label: "x", width: 12.5}
+      - {click: r, label: "r", width: 12.5}
+      - {click: y, label: "y", width: 12.5}
 
-      # 第三行：平舌音 + 零声母标记 + 手动切换键（自动切换到韵母层）
-      - {click: sh, select: shengyun_finals, label: "sh", width: 11}
-      - {click: r, select: shengyun_finals, label: "r", width: 11}
-      - {click: z, select: shengyun_finals, label: "z", width: 11}
-      - {click: c, select: shengyun_finals, label: "c", width: 11}
-      - {click: s, select: shengyun_finals, label: "s", width: 11}
-      - {click: y, select: shengyun_finals, label: "y", width: 11}
-      - {click: w, select: shengyun_finals, label: "w", width: 11}
+      # 第三行：翘舌音连续 + 平舌音连续 + 零声母标记 (zh ch sh z c s w)
+      - {click: zh, label: "zh", width: 11}
+      - {click: ch, label: "ch", width: 11}
+      - {click: sh, label: "sh", width: 11}
+      - {click: z, label: "z", width: 11}
+      - {click: c, label: "c", width: 11}
+      - {click: s, label: "s", width: 11}
+      - {click: w, label: "w", width: 11}
       - {click: Keyboard_shengyun_finals, label: "➔韵母", width: 23, send_bindings: false, hilited: true}
 
       # 第四行：控制键
@@ -98,98 +95,52 @@ preset_keyboards:
     height: 70
     lock: true
     keys:
-      # 第一行：单韵母 + 复韵母 ai ei ui ao ou（纯拼音a，自动返回声母层）
-      - {click: a, select: shengyun_initials, label: "a", long_click: "1", width: 10}
-      - {click: o, select: shengyun_initials, label: "o", long_click: "2", width: 10}
-      - {click: e, select: shengyun_initials, label: "e", long_click: "3", width: 10}
-      - {click: i, select: shengyun_initials, label: "i", long_click: "4", width: 10}
-      - {click: u, select: shengyun_initials, label: "u", long_click: "5", width: 10}
-      - {click: v, select: shengyun_initials, label: "ü", long_click: "6", width: 10}
-      - {click: ai, select: shengyun_initials, label: "ai", long_click: "7", width: 10}
-      - {click: ei, select: shengyun_initials, label: "ei", long_click: "8", width: 10}
-      - {click: ui, select: shengyun_initials, label: "ui", long_click: "9", width: 10}
-      - {click: ao, select: shengyun_initials, label: "ao", long_click: "0", width: 10}
+      # 第一行：单韵母 + 常用复韵母 (a o e i u ü ai ei ui ao)
+      - {click: a, label: "a", width: 10}
+      - {click: o, label: "o", width: 10}
+      - {click: e, label: "e", width: 10}
+      - {click: i, label: "i", width: 10}
+      - {click: u, label: "u", width: 10}
+      - {click: v, label: "ü", width: 10}
+      - {click: ai, label: "ai", width: 10}
+      - {click: ei, label: "ei", width: 10}
+      - {click: ui, label: "ui", width: 10}
+      - {click: ao, label: "ao", width: 10}
 
-      # 第二行：复韵母 ou iu ie üe er + 特殊韵母（自动返回声母层）
-      - {click: ou, select: shengyun_initials, label: "ou", width: 10}
-      - {click: iu, select: shengyun_initials, label: "iu", width: 10}
-      - {click: ie, select: shengyun_initials, label: "ie", width: 10}
-      - {click: ve, select: shengyun_initials, label: "üe", width: 10}
-      - {click: er, select: shengyun_initials, label: "er", width: 10}
-      - {click: ia, select: shengyun_initials, label: "ia", width: 10}
-      - {click: ua, select: shengyun_initials, label: "ua", width: 10}
-      - {click: uo, select: shengyun_initials, label: "uo", width: 10}
-      - {click: iao, select: shengyun_initials, label: "iao", width: 10}
-      - {click: uai, select: shengyun_initials, label: "uai", width: 10}
+      # 第二行：复韵母 (ou iu ie üe er ia ua uo uai iao) iao在ao正下方
+      - {click: ou, label: "ou", width: 10}
+      - {click: iu, label: "iu", width: 10}
+      - {click: ie, label: "ie", width: 10}
+      - {click: ve, label: "üe", width: 10}
+      - {click: er, label: "er", width: 10}
+      - {click: ia, label: "ia", width: 10}
+      - {click: ua, label: "ua", width: 10}
+      - {click: uo, label: "uo", width: 10}
+      - {click: uai, label: "uai", width: 10}
+      - {click: iao, label: "iao", width: 10}
 
-      # 第三行：前鼻韵母 an en in un ün + 后鼻韵母 ang eng ing ong（自动返回声母层）
-      - {click: an, select: shengyun_initials, label: "an", width: 9}
-      - {click: en, select: shengyun_initials, label: "en", width: 9}
-      - {click: in, select: shengyun_initials, label: "in", width: 9}
-      - {click: un, select: shengyun_initials, label: "un", width: 9}
-      - {click: vn, select: shengyun_initials, label: "ün", width: 9}
-      - {click: ang, select: shengyun_initials, label: "ang", width: 10}
-      - {click: eng, select: shengyun_initials, label: "eng", width: 10}
-      - {click: ing, select: shengyun_initials, label: "ing", width: 10}
-      - {click: ong, select: shengyun_initials, label: "ong", width: 10}
-      - {click: Keyboard_shengyun_initials, label: "声母➔", width: 15, send_bindings: false, hilited: true}
+      # 第三行：鼻韵母 (an en in un ün ang eng ing ong) 9键对齐
+      - {click: an, label: "an", width: 11.1}
+      - {click: en, label: "en", width: 11.1}
+      - {click: in, label: "in", width: 11.1}
+      - {click: un, label: "un", width: 11.1}
+      - {click: vn, label: "ün", width: 11.2}
+      - {click: ang, label: "ang", width: 11.1}
+      - {click: eng, label: "eng", width: 11.1}
+      - {click: ing, label: "ing", width: 11.1}
+      - {click: ong, label: "ong", width: 11.1}
 
-      # 第四行：特殊韵母组合 + 控制键（自动返回声母层）
-      - {click: ian, select: shengyun_initials, label: "ian", width: 10}
-      - {click: uan, select: shengyun_initials, label: "uan", width: 10}
-      - {click: van, select: shengyun_initials, label: "üan", width: 10}
-      - {click: iang, select: shengyun_initials, label: "iang", width: 10}
-      - {click: uang, select: shengyun_initials, label: "uang", width: 10}
-      - {click: iong, select: shengyun_initials, label: "iong", width: 10}
-      - {click: space, label: "空格", width: 30}
-      - {click: BackSpace, label: "⌫", width: 10, repeat: true}
-      - {click: Return, label: "↵", width: 10}
-
-  # 零声母键盘（可选，用于直接输入零声母音节）
-  shengyun_zero:
-    name: 零声母
-    author: shengyun
-    ascii_mode: 0
-    width: 10
-    height: 70
-    lock: true
-    keys:
-      # 整体认读音节和零声母音节（自动返回声母层）
-      # 第一行
-      - {click: a, select: shengyun_initials, label: "a", width: 12.5}
-      - {click: o, select: shengyun_initials, label: "o", width: 12.5}
-      - {click: e, select: shengyun_initials, label: "e", width: 12.5}
-      - {click: ai, select: shengyun_initials, label: "ai", width: 12.5}
-      - {click: ei, select: shengyun_initials, label: "ei", width: 12.5}
-      - {click: ao, select: shengyun_initials, label: "ao", width: 12.5}
-      - {click: ou, select: shengyun_initials, label: "ou", width: 12.5}
-      - {click: er, select: shengyun_initials, label: "er", width: 12.5}
-
-      # 第二行
-      - {click: an, select: shengyun_initials, label: "an", width: 12.5}
-      - {click: en, select: shengyun_initials, label: "en", width: 12.5}
-      - {click: ang, select: shengyun_initials, label: "ang", width: 12.5}
-      - {click: eng, select: shengyun_initials, label: "eng", width: 12.5}
-      - {click: yi, select: shengyun_initials, label: "yi", width: 12.5}
-      - {click: wu, select: shengyun_initials, label: "wu", width: 12.5}
-      - {click: yu, select: shengyun_initials, label: "yu", width: 12.5}
-      - {click: ye, select: shengyun_initials, label: "ye", width: 12.5}
-
-      # 第三行
-      - {click: yue, select: shengyun_initials, label: "yue", width: 11}
-      - {click: yuan, select: shengyun_initials, label: "yuan", width: 11}
-      - {click: yin, select: shengyun_initials, label: "yin", width: 11}
-      - {click: yun, select: shengyun_initials, label: "yun", width: 11}
-      - {click: ying, select: shengyun_initials, label: "ying", width: 11}
-      - {click: yong, select: shengyun_initials, label: "yong", width: 11}
-      - {click: Keyboard_shengyun_initials, label: "声母", width: 23, send_bindings: false}
-
-      # 第四行：控制键
-      - {click: Mode_switch, label: "符号", long_click: Menu, width: 15}
-      - {click: Keyboard_default, label: "ABC", width: 15}
-      - {click: space, label: "空格", width: 40}
-      - {click: BackSpace, label: "⌫", width: 15, repeat: true}
-      - {click: Return, label: "↵", width: 15}
+      # 第四行：复合鼻韵母严格对齐 + 控制键 (9键)
+      # ian在an下, uan在un下, üan在ün下, iang在ang下, uang在eng下, iong在ong下
+      - {click: ian, label: "ian", width: 11.1}
+      - {click: Keyboard_shengyun_initials, label: "➔声母", width: 11.1, send_bindings: false, hilited: true}
+      - {click: space, label: "空格", width: 11.1}
+      - {click: uan, label: "uan", width: 11.1}
+      - {click: van, label: "üan", width: 11.2}
+      - {click: iang, label: "iang", width: 11.1}
+      - {click: uang, label: "uang", width: 11.1}
+      - {click: BackSpace, label: "⌫", width: 11.1, repeat: true}
+      - {click: iong, label: "iong", width: 11.1}
 
   # 声韵主键盘（默认显示声母层）
   shengyun:
@@ -200,4 +151,3 @@ preset_keys:
   Keyboard_shengyun: {label: 声韵, send: Eisu_toggle, select: shengyun}
   Keyboard_shengyun_initials: {label: 声母, send: Eisu_toggle, select: shengyun_initials}
   Keyboard_shengyun_finals: {label: 韵母, send: Eisu_toggle, select: shengyun_finals}
-  Keyboard_shengyun_zero: {label: 零声母, send: Eisu_toggle, select: shengyun_zero}

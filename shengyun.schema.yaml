@@ -44,6 +44,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@shengyun_keyboard_switcher  # 声韵键盘自动切换
     - ascii_composer
     - recognizer
     - key_binder
