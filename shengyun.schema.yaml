@@ -1,0 +1,150 @@
+# SPDX-FileCopyrightText: 2025 Shengyun IME
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# 声韵输入法方案
+# encoding: utf-8
+
+schema:
+  schema_id: shengyun
+  name: 声韵拼音
+  version: "1.0.0"
+  author:
+    - Shengyun IME
+  description: |
+    声母+韵母分层输入的拼音方案
+    专为学习拼音的幼儿园儿童设计
+
+    输入方式：
+    1. 先点击声母（b/p/m/f/d/t/n/l/g/k/h/j/q/x/zh/ch/sh/r/z/c/s/y/w）
+       → 自动切换到韵母层
+    2. 再点击韵母（a/o/e/i/u/ü及其组合）
+       → 自动切换回声母层
+    3. 完成拼音输入，仅需2次点击
+
+    示例：
+    - liang（两）= l + iang
+    - zhang（张）= zh + ang
+    - ju（居）= j + u（实际是jü）
+    - yi（一）= y + i
+  dependencies:
+    - luna_pinyin
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    reset: 1
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    reset: 0
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    # 声韵输入方案的拼写代数
+
+    # 1. 保留原始拼音
+    - xform/^([a-z]+)$/$1/
+
+    # 2. 处理 ü 的输入（v 代表 ü）
+    - derive/ü/v/
+
+    # 3. j/q/x + u 等价于 j/q/x + v（都是ü的发音）
+    - derive/^([jqx])u/$1v/
+    - derive/^([jqx])v/$1u/
+    - derive/^yu/yv/
+
+    # 4. 声母简写支持
+    - abbrev/^([bpmf])([a-z]+)$/$1/
+    - abbrev/^([dtnl])([a-z]+)$/$1/
+    - abbrev/^([gkh])([a-z]+)$/$1/
+    - abbrev/^([jqx])([a-z]+)$/$1/
+    - abbrev/^(zh|ch|sh)([a-z]+)$/$1/
+    - abbrev/^([zcs])([a-z]+)$/$1/
+    - abbrev/^([yw])([a-z]+)$/$1/
+    - abbrev/^([r])([a-z]+)$/$1/
+
+    # 5. 智能过滤：阻止无效声韵组合
+
+    # j/q/x 只能配 i系和ü系（不能配a/o/e/ang/ong等）
+    - erase/^([jqx])([aoe]|a[oin]|[eo]u|[ae]ng|ong|u[ao]|uai|u[ae]ng?)$/
+
+    # zh/ch/sh/r 不能配 i复合韵母（但单独的i可以：zhi）
+    - erase/^([zcs]h|r)(ia|iao|ie|iu|i[ae]ng?|iong)$/
+    # zh/ch/sh/r/z/c/s 不能配 ü系
+    - erase/^([zcs]h?|r)v[aenu]?$/
+
+    # g/k/h 不能配 i系和ü系
+    - erase/^([gkh])(i[aeou]?|i[ae]ng?|iong|v[aenu]?)$/
+
+    # b/p/m/f 不能配 ü系和iong
+    - erase/^([bpmf])(v[aenu]?|iong)$/
+
+    # d/t 不能配 ü系（但n/l可以）
+    - erase/^([dt])v[aenu]?$/
+
+    # 6. 容错处理
+    - derive/([aeiou])([iuü])/$1$1$2/  # 允许双写元音
+    - derive/iu/iou/  # iu = iou
+    - derive/ui/uei/  # ui = uei
+    - derive/un/uen/  # un = uen（除了 jun/qun/xun）
+
+translator:
+  dictionary: luna_pinyin
+  prism: shengyun
+  spelling_hints: 8  # 显示拼音提示
+  preedit_format:
+    # 显示格式化：在输入区显示正确的拼音形式
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  comment_format:
+    # 候选词注释格式化
+    - xform/([nl])v/$1ü/
+    - xform/([jqxy])v/$1u/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+  bindings:
+    # 声韵输入法专用快捷键
+    - { when: composing, accept: Control+Shift+1, toggle: ascii_mode }
+    - { when: composing, accept: Control+Shift+2, toggle: full_shape }
+    - { when: composing, accept: Control+Shift+3, toggle: simplification }
+    - { when: composing, accept: Control+Shift+4, toggle: ascii_punct }
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: "^/([0-9]0?|[a-z]+)$"
+    reverse_lookup: "`[a-z]*'?$"
