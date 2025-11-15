@@ -1307,7 +1307,7 @@ preset_keyboards:
       - {click: space, label: "␣", width: 10}
       - {click: BackSpace, label: "⌫", width: 10, repeat: true}
 
-  # 通用韵母层（显示所有39个韵母，西文模式专用）
+  # 通用韵母层（显示所有35个韵母，西文模式专用）
   shengyun_finals_all:
     name: 韵母层-全部
     author: shengyun
@@ -1316,53 +1316,53 @@ preset_keyboards:
     height: 70
     lock: true
     keys:
-      # 行1【单韵母 + 基础复韵母】(10个): a ai ao an ang e i o u ü
+      # 行1【基础韵母层】er a an ang o e en ao 空 空
+      - {click: er, select: shengyun_initials, label: "er", width: 10}
       - {click: a, select: shengyun_initials, label: "a", width: 10}
-      - {click: ai, select: shengyun_initials, label: "ai", width: 10}
-      - {click: ao, select: shengyun_initials, label: "ao", width: 10}
       - {click: an, select: shengyun_initials, label: "an", width: 10}
       - {click: ang, select: shengyun_initials, label: "ang", width: 10}
-      - {click: e, select: shengyun_initials, label: "e", width: 10}
-      - {click: i, select: shengyun_initials, label: "i", width: 10}
       - {click: o, select: shengyun_initials, label: "o", width: 10}
-      - {click: u, select: shengyun_initials, label: "u", width: 10}
-      - {click: v, select: shengyun_initials, label: "ü", width: 10}
+      - {click: e, select: shengyun_initials, label: "e", width: 10}
+      - {click: en, select: shengyun_initials, label: "en", width: 10}
+      - {click: ao, select: shengyun_initials, label: "ao", width: 10}
+      - {click: space, label: " ", width: 10}
+      - {click: space, label: " ", width: 10}
 
-      # 行2【i系复韵母 + 其他复韵母】(10个): ia iao ian iang ei ie ou uo er [空]
-      - {click: ia, select: shengyun_initials, label: "ia", width: 10}
-      - {click: iao, select: shengyun_initials, label: "iao", width: 10}
+      # 行2【i系韵母层】i ai ian iang 空 ei ie iao in ia
+      - {click: i, select: shengyun_initials, label: "i", width: 10}
+      - {click: ai, select: shengyun_initials, label: "ai", width: 10}
       - {click: ian, select: shengyun_initials, label: "ian", width: 10}
       - {click: iang, select: shengyun_initials, label: "iang", width: 10}
       - {click: space, label: " ", width: 10}
       - {click: ei, select: shengyun_initials, label: "ei", width: 10}
       - {click: ie, select: shengyun_initials, label: "ie", width: 10}
-      - {click: ou, select: shengyun_initials, label: "ou", width: 10}
-      - {click: uo, select: shengyun_initials, label: "uo", width: 10}
-      - {click: er, select: shengyun_initials, label: "er", width: 10}
+      - {click: iao, select: shengyun_initials, label: "iao", width: 10}
+      - {click: in, select: shengyun_initials, label: "in", width: 10}
+      - {click: ia, select: shengyun_initials, label: "ia", width: 10}
 
-      # 行3【u/ü系复韵母 + 鼻韵母】(10个): ua uai uan uang ong en iu in ing üe
+      # 行3【u系韵母层】u ua uai uang ou ui iu iong 空 ⇧
+      - {click: u, select: shengyun_initials, label: "u", width: 10}
       - {click: ua, select: shengyun_initials, label: "ua", width: 10}
       - {click: uai, select: shengyun_initials, label: "uai", width: 10}
-      - {click: uan, select: shengyun_initials, label: "uan", width: 10}
       - {click: uang, select: shengyun_initials, label: "uang", width: 10}
-      - {click: ong, select: shengyun_initials, label: "ong", width: 10}
-      - {click: en, select: shengyun_initials, label: "en", width: 10}
-      - {click: iu, select: shengyun_initials, label: "iu", width: 10}
-      - {click: in, select: shengyun_initials, label: "in", width: 10}
-      - {click: ing, select: shengyun_initials, label: "ing", width: 10}
-      - {click: ve, select: shengyun_initials, label: "üe", width: 10}
-
-      # 行4【剩余鼻韵母 + 控制键】(10个): ⇧ ui un iong eng 空格 ün üan ⌫ [空]
-      - {click: Keyboard_shengyun_initials, label: "⇧", width: 10, send_bindings: false, hilited: true}
+      - {click: ou, select: shengyun_initials, label: "ou", width: 10}
       - {click: ui, select: shengyun_initials, label: "ui", width: 10}
-      - {click: un, select: shengyun_initials, label: "un", width: 10}
+      - {click: iu, select: shengyun_initials, label: "iu", width: 10}
       - {click: iong, select: shengyun_initials, label: "iong", width: 10}
-      - {click: eng, select: shengyun_initials, label: "eng", width: 10}
-      - {click: space, label: "␣", width: 10}
-      - {click: vn, select: shengyun_initials, label: "ün", width: 10}
-      - {click: van, select: shengyun_initials, label: "üan", width: 10}
-      - {click: BackSpace, label: "⌫", width: 10, repeat: true}
       - {click: space, label: " ", width: 10}
+      - {click: Keyboard_shengyun_initials, label: "⇧", width: 10, send_bindings: false, hilited: true}
+
+      # 行4【ü系+后鼻音+控制】ü ün uan eng uo üe ing ong ␣ ⌫
+      - {click: v, select: shengyun_initials, label: "ü", width: 10}
+      - {click: vn, select: shengyun_initials, label: "ün", width: 10}
+      - {click: uan, select: shengyun_initials, label: "uan", width: 10}
+      - {click: eng, select: shengyun_initials, label: "eng", width: 10}
+      - {click: uo, select: shengyun_initials, label: "uo", width: 10}
+      - {click: ve, select: shengyun_initials, label: "üe", width: 10}
+      - {click: ing, select: shengyun_initials, label: "ing", width: 10}
+      - {click: ong, select: shengyun_initials, label: "ong", width: 10}
+      - {click: space, label: "␣", width: 10}
+      - {click: BackSpace, label: "⌫", width: 10, repeat: true}
 
   # 声韵主键盘（默认显示声母层）
   shengyun:
