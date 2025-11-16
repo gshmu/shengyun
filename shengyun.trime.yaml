@@ -50,11 +50,11 @@ preset_keyboards:
     height: 70
     lock: true
     keys:
-      # 第一行：声调 + 标点（1-4声调过滤，5-9标点短按/数字长按，0句号短按/数字长按）
-      - {click: "1", long_click: "ˉ", label: "1", width: 10, key_text_size: 20}
-      - {click: "2", long_click: "ˊ", label: "2", width: 10, key_text_size: 20}
-      - {click: "3", long_click: "ˇ", label: "3", width: 10, key_text_size: 20}
-      - {click: "4", long_click: "ˋ", label: "4", width: 10, key_text_size: 20}
+      # 第一行：声调 + 标点（短按1-4声调过滤，长按输入数字；5-9标点短按/数字长按）
+      - {click: "1", long_click: "1", label: "ˉ", width: 10, key_text_size: 20}
+      - {click: "2", long_click: "2", label: "ˊ", width: 10, key_text_size: 20}
+      - {click: "3", long_click: "3", label: "ˇ", width: 10, key_text_size: 20}
+      - {click: "4", long_click: "4", label: "ˋ", width: 10, key_text_size: 20}
       - {click: "：", long_click: "5", label: "：", width: 10, key_text_size: 20}
       - {click: "、", long_click: "6", label: "、", width: 10, key_text_size: 20}
       - {click: "？", long_click: "7", label: "？", width: 10, key_text_size: 20}
