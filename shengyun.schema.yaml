@@ -7,7 +7,7 @@
 schema:
   schema_id: shengyun
   name: 声韵拼音
-  version: "1.0.1"
+  version: "1.0.2"
   author:
     - gshmu (https://gshmu.com)
   description: |
