@@ -6,6 +6,10 @@ __pycache__/
 *.pyc
 *.pyo
 
+# IDE
+.idea/
+.vscode/
+
 # 临时文件
 *.tmp
 *.bak
