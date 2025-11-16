@@ -79,10 +79,52 @@ def read_mask_config():
     return config, zero_initial_config
 
 def convert_u_display(text, initial):
-    """j/q/x/y 层：ü→u 转换"""
+    """j/q/x/y 层：ü→u 转换显示"""
     if initial in U_CONVERT_INITIALS:
         return text.replace('ü', 'u')
     return text
+
+def convert_final_for_click(final, initial):
+    """转换 CSV 中的韵母为实际 RIME 输入码
+
+    互补分布规则：
+    - ün 位置：j/q/x/y/n/l 用 ün（或 v），其他用 un
+    - uan 位置：所有声母都用 uan
+    """
+    # ün/un 互补分布
+    if final == 'ün':
+        # j/q/x/y: jun (RIME识别为jün), n/l: nün/lün
+        if initial in {'j', 'q', 'x', 'y'}:
+            return 'un'  # j+un → jun，RIME自动识别为jün
+        elif initial in {'n', 'l'}:
+            return 'ün'  # n+ün → nün
+        else:
+            return 'un'  # k+un → kun
+
+    # 其他韵母正常处理
+    return final
+
+def convert_label_for_display(final, initial):
+    """转换韵母为显示标签
+
+    显示规则：
+    - j/q/x/y: ü→u 转换
+    - n/l: 保留 ün
+    - 其他: ün→un
+    """
+    if final == 'ün':
+        if initial in U_CONVERT_INITIALS:  # j/q/x/y
+            return 'un'
+        elif initial in {'n', 'l'}:
+            return 'ün'
+        else:
+            return 'un'
+
+    # j/q/x/y 的其他 ü 转换
+    if initial in U_CONVERT_INITIALS:
+        return final.replace('ü', 'u')
+
+    return final
 
 def generate_keyboard_for_initial(initial, layout_rows, mask_config):
     """为单个声母生成键盘布局"""
@@ -128,9 +170,9 @@ def generate_keyboard_for_initial(initial, layout_rows, mask_config):
                 lines.append(f"      - {{click: space, label: \" \", width: 11.11}}")
             else:
                 # 未屏蔽：正常显示
-                # j/q/x/y 层需要 ü→u 转换
-                display_label = convert_u_display(final, initial)
-                click_value = f"{initial}{final}"
+                display_label = convert_label_for_display(final, initial)
+                click_final = convert_final_for_click(final, initial)
+                click_value = f"{initial}{click_final}"
                 lines.append(f"      - {{click: {click_value}, select: shengyun_initials, label: \"{display_label}\", width: 11.11}}")
 
     lines.append("")  # 空行分隔

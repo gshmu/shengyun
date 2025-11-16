@@ -21,102 +21,102 @@ zero_initial:
 initials:
   # 双唇音
   b:
-    # 八o波i逼 白ei北ao包 an班en奔ang帮eng崩 ie别iao标 ian边in宾ing冰 u补
-    masked_finals: [er, e, ou, ia, iang, iong, iu, ua, uo, uai, ui, uan, un, uang, ong, ü, üe, ün]
+    # 八o波i逼 白ei北ao包 an班en奔ang帮eng崩 ie别iao标 ian边in宾ing冰 u补 buan伴(无)
+    masked_finals: [er, e, ou, ia, iang, iong, iu, ua, uo, uai, ui, uan, uang, ong, ü, üe]
 
   p:
-    # 趴o坡i批 拍ei配ao泡ou剖 an潘en盆ang乓eng彭 ie撇iao飘 ian偏in拼ing平 u扑
-    masked_finals: [er, e, ia, iang, iong, iu, ua, uo, uai, ui, uan, un, uang, ong, ü, üe, ün]
+    # 趴o坡i批 拍ei配ao泡ou剖 an潘en盆ang乓eng彭 ie撇iao飘 ian偏in拼ing平 u扑 puan判(无)
+    masked_finals: [er, e, ia, iang, iong, iu, ua, uo, uai, ui, uan, uang, ong, ü, üe]
 
   m:
-    # 妈o摸e么 mai买ei美ao猫ou谋 an曼en门ang忙eng蒙 ie灭iao喵 ian眠in民ing明 u木
-    masked_finals: [er, ia, iang, iong, iu, ua, uo, uai, ui, uan, un, uang, ong, ü, üe, ün]
+    # 妈o摸e么 mai买ei美ao猫ou谋 an曼en门ang忙eng蒙 ie灭iao喵 ian眠in民ing明 u木 muan(无)
+    masked_finals: [er, ia, iang, iong, iu, ua, uo, uai, ui, uan, uang, ong, ü, üe]
 
   f:
-    # 发o佛 fei飞ao佛ou否 an番en分ang方eng风 fu福
-    masked_finals: [er, e, i, in, ia, iang, ie, iong, iu, ian, ing, ua, uo, uai, ui, uan, un, uang, ong, ü, üe, ün]
+    # 发o佛 fei飞ao佛ou否 an番en分ang方eng风 fu福 fun分(无)
+    masked_finals: [er, e, i, in, ia, iang, ie, iong, iu, ian, ing, ua, uo, uai, ui, uan, uang, ong, ü, üe]
 
   # 舌尖中音
   d:
     # 搭e德 dai呆ei第ao刀ou都 an单en灯ang当eng等 ia嗲ie跌iao雕iu丢 ian电in顶ing丁iong动
     # u读 uo多ui对uan段un顿ong东
-    masked_finals: [er, ua, uai, uang, ü, üe, ün, üan]
+    masked_finals: [er, ua, uai, uang, ü, üe]
 
   t:
     # 他e特 tai台ei提ao桃ou头 an谈en疼ang唐eng腾 ie贴iao条 tian田ting听 tu土 tuo拖tui推tuan团tun吞 tong通
-    masked_finals: [er, ia, iang, iu, in, iong, ua, uai, uang, ü, üe, ün, üan]
+    masked_finals: [er, ia, iang, iu, in, iong, ua, uai, uang, ü, üe]
 
   n:
     # 拿e呢 nai奶ei内ao脑ou耨 an男en嫩ang囊eng能 nie捏niao鸟niu牛 nian年ning宁 nu奴 nuo诺nuan暖 nü女 nüe虐
-    masked_finals: [er, ia, iang, in, un, uai, ui, uang, ong, ün, üan]
+    masked_finals: [er, ia, iang, in, uai, ui, uang, ong, uan]
 
   l:
     # 拉e勒o咯 lai来lei累lao老lou楼 lan蓝lang狼leng楞 lie列liao料liu六 lian连lin林ling灵 lu路 luo落luan乱lun论long龙 lü绿 lüe略
-    masked_finals: [er, ia, iang, uai, ui, uang, ün, üan]
+    masked_finals: [er, ia, iang, uai, ui, uang]
 
   # 舌根音（不配i系和ü系）
   g:
     # 嘎e格 gai该gei给gao高gou狗 gan敢gen根gang刚geng耕 gu古 gua瓜guo国guai怪gui归guan关gun滚guang光 gong公
-    masked_finals: [er, i, in, ia, iang, ie, iao, iong, iu, ian, ing, ü, üe, ün, üan]
+    masked_finals: [er, i, in, ia, iang, ie, iao, iong, iu, ian, ing, ü, üe]
 
   k:
     # 卡e克 kai开kao考kou口 kan看ken肯kang康keng坑 ku哭 kua夸kuo阔kuai快kui亏kuan宽kun困kuang狂 kong空
-    masked_finals: [er, i, in, ei, ia, iang, ie, iao, iong, iu, ian, ing, ü, üe, ün, üan]
+    masked_finals: [er, i, in, ei, ia, iang, ie, iao, iong, iu, ian, ing, ü, üe]
 
   h:
     # 哈e喝 hai海hei黑hao好hou后 han汉hen很hang行heng哼 hu胡 hua花huo火huai坏hui回huan欢hun混huang黄 hong红
-    masked_finals: [er, i, in, ia, iang, ie, iao, iong, iu, ian, ing, ü, üe, ün, üan]
+    masked_finals: [er, i, in, ia, iang, ie, iao, iong, iu, ian, ing, ü, üe]
 
   # 舌面音（只配i系和ü系，j/q/x显示u实际发ü音）
   j:
     # ji几 jia家jie姐jiao叫jiu九 jian间jin今jiang江jing京jiong炯 ju居 jue觉jun军juan捐
-    # 注：ü/üe/ün/üan 在此层显示为 u/ue/un/uan（自动转换）
-    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, un, uang, ong]
+    # 注：ü/üe/ün/uan 在此层显示为 u/ue/un/uan（自动转换）
+    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, uang, ong]
 
   q:
     # qi七 qia恰qie切qiao桥qiu球 qian前qin琴qiang强qing青qiong穷 qu去 que却qun群quan全
-    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, un, uang, ong]
+    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, uang, ong]
 
   x:
     # xi西 xia下xie些xiao小xiu修 xian先xin新xiang香xing星xiong熊 xu需 xue学xun寻xuan选
-    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, un, uang, ong]
+    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, uang, ong]
 
   # 舌尖后音（翘舌音，不配i复合韵母和ü系）
   zh:
     # zhi知 zha炸zhe这zhao找zhei这zhou周 zhan站zhen真zhang张zheng正 zhu主 zhua抓zhuo桌zhui追zhuan转zhun准zhuang装 zhong中
-    masked_finals: [er, ia, iang, ie, iao, iong, iu, ian, in, ing, ü, üe, ün, üan]
+    masked_finals: [er, ia, iang, ie, iao, iong, iu, ian, in, ing, ü, üe]
 
   ch:
     # chi吃 cha茶che车chao吵chou愁 chan产chen陈chang长cheng成 chu出 chuo戳chui吹chuan川chun春chuang窗 chong冲
-    masked_finals: [er, o, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, ü, üe, ün, üan]
+    masked_finals: [er, o, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, ü, üe]
 
   sh:
     # shi是 sha沙she蛇shao少shei谁shou收 shan山shen深shang商sheng生 shu书 shua刷shuo说shui水shuan栓shun顺shuang双
-    masked_finals: [er, o, ia, iang, ie, iao, iong, iu, ian, in, ing, ong, ü, üe, ün, üan]
+    masked_finals: [er, o, ia, iang, ie, iao, iong, iu, ian, in, ing, ong, ü, üe]
 
   r:
     # ri日 re热rao绕rou肉 ran然ren人rang让reng扔 ru如 ruo若rui瑞ruan软run润 rong容
-    masked_finals: [er, a, ai, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, uai, uang, ü, üe, ün, üan]
+    masked_finals: [er, a, ai, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, uai, uang, ü, üe]
 
   # 舌尖前音（平舌音，同翘舌音规则）
   z:
     # zi字 za杂ze则zao早zei贼zou走 zan赞zen怎zang脏zeng增 zu租 zuo做zui最zuan钻zun尊 zong总
-    masked_finals: [er, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, uai, uang, ü, üe, ün, üan]
+    masked_finals: [er, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, uai, uang, ü, üe]
 
   c:
     # ci次 ca擦ce册cao草cou凑 can参cang仓ceng层 cu粗 cuo错cui脆cuan窜cun村 cong从
-    masked_finals: [er, o, ei, ia, iang, ie, iao, iong, iu, ian, in, ing, en, ua, uai, uang, ü, üe, ün, üan]
+    masked_finals: [er, o, ei, ia, iang, ie, iao, iong, iu, ian, in, ing, en, ua, uai, uang, ü, üe]
 
   s:
     # si四 sa撒se色sao扫sou搜 san三sen森sang桑seng僧 su苏 suo所sui岁suan酸sun孙 song送
-    masked_finals: [er, o, ei, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, uai, uang, ü, üe, ün, üan]
+    masked_finals: [er, o, ei, ia, iang, ie, iao, iong, iu, ian, in, ing, ua, uai, uang, ü, üe]
 
   # 零声母标记
   y:
     # yi一 ya呀ye也yao要you有 yan言yang羊yin因ying英yong永 yu鱼 yue月yun云yuan元
-    # 注：ü/üe/ün/üan 在此层显示为 u/ue/un/uan（自动转换）
-    masked_finals: [er, o, ai, ei, ia, iang, ie, iao, iu, ian, en, eng, wa, uo, uai, ui, un, uang, ong]
+    # 注：ü/üe/ün/uan 在此层显示为 u/ue/un/uan（自动转换）
+    masked_finals: [er, o, ai, ei, ia, iang, ie, iao, iu, ian, en, eng, ua, uo, uai, ui, uang, ong]
 
   w:
     # wu五 wa娃wo我wai歪wei为 wan万wen文wang王weng翁
-    masked_finals: [er, i, in, e, ao, ou, ia, iang, ie, iao, iong, iu, ian, ing, ua, uo, uai, ui, uan, un, uang, ong, ü, üe, ün, üan]
+    masked_finals: [er, i, in, e, ao, ou, ia, iang, ie, iao, iong, iu, ian, ing, ua, uo, uai, ui, uan, ong, ü, üe, ün]
