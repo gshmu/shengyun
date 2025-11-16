@@ -1,0 +1,12 @@
+# 生成的中间文件
+finals_generated.yaml
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# 临时文件
+*.tmp
+*.bak
+.DS_Store
