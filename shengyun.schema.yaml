@@ -7,25 +7,27 @@
 schema:
   schema_id: shengyun
   name: 声韵拼音
-  version: "1.0.0"
+  version: "1.0.1"
   author:
-    - Shengyun IME
+    - gshmu (https://gshmu.com)
   description: |
     声母+韵母分层输入的拼音方案
     专为学习拼音的幼儿园儿童设计
 
     输入方式：
-    1. 先点击声母（b/p/m/f/d/t/n/l/g/k/h/j/q/x/zh/ch/sh/r/z/c/s/y/w）
+    1. 先点击声母（b/p/m/f/d/t/n/l/g/k/h/j/q/x/zh/ch/sh/r/z/c/s）或假声母（y/w）
        → 自动切换到韵母层
     2. 再点击韵母（a/o/e/i/u/ü及其组合）
        → 自动切换回声母层
     3. 完成拼音输入，仅需2次点击
 
+    注：零声母特指不含声母和假声母的独立韵母（a/o/e/ai/ei/ao/ou/an/en/ang/eng/ong/er）
+
     示例：
     - liang（两）= l + iang
     - zhang（张）= zh + ang
     - ju（居）= j + u（实际是jü）
-    - yi（一）= y + i
+    - yi（一）= y + i（y为假声母）
   dependencies:
     - luna_pinyin
 
@@ -63,11 +65,11 @@ engine:
     - script_translator
   filters:
     - simplifier
-    - lua_filter@tone_filter  # 声调过滤器：支持1234过滤声调
+    # - lua_filter@tone_filter  # 声调过滤暂不支持：luna_pinyin 词库不包含声调注释，需要 terra_pinyin
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba1234  # 添加1234用于声调过滤
+  alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
   algebra:
     # 声韵输入方案的拼写代数
@@ -141,11 +143,6 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-    # 禁用数字选词，改为声调过滤
-    - { when: has_menu, accept: "1", send: "1" }
-    - { when: has_menu, accept: "2", send: "2" }
-    - { when: has_menu, accept: "3", send: "3" }
-    - { when: has_menu, accept: "4", send: "4" }
     # 声韵输入法专用快捷键
     - { when: composing, accept: Control+Shift+1, toggle: ascii_mode }
     - { when: composing, accept: Control+Shift+2, toggle: full_shape }
