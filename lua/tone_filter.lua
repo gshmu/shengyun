@@ -2,9 +2,31 @@
 -- 声调过滤器：支持通过数字1234过滤带声调的候选词
 -- 用法：输入拼音后，按1234选择对应声调的候选词
 
-local function get_tone(text)
-    -- 从汉字中提取声调信息
-    -- 简化版：通过拼音注释获取声调
+-- 从汉字的拼音中提取声调
+local function get_tone_from_pinyin(pinyin)
+    if not pinyin then return nil end
+
+    -- 一声：ā ē ī ō ū ǖ ń ň ǹ
+    if pinyin:find("[āēīōūǖńǸĀĒĪŌŪǕŃŇǸ]") then
+        return "1"
+    end
+
+    -- 二声：á é í ó ú ǘ ń
+    if pinyin:find("[áéíóúǘńÁÉÍÓÚǗŃ]") then
+        return "2"
+    end
+
+    -- 三声：ǎ ě ǐ ǒ ǔ ǚ ň
+    if pinyin:find("[ǎěǐǒǔǚňǍĚǏǑǓǙŇ]") then
+        return "3"
+    end
+
+    -- 四声：à è ì ò ù ǜ ǹ
+    if pinyin:find("[àèìòùǜǹÀÈÌÒÙǛǸ]") then
+        return "4"
+    end
+
+    -- 轻声或无法识别
     return nil
 end
 
@@ -23,32 +45,24 @@ local function tone_filter(input, env)
         return
     end
 
-    -- 移除声调标记，获取纯拼音
-    local pure_pinyin = input_code:sub(1, -2)
-
-    -- 过滤候选词：只显示匹配声调的候选词
+    -- 有声调标记，过滤候选词
+    local has_output = false
     for cand in input:iter() do
-        -- 获取候选词的拼音注释
-        local comment = cand.comment
+        local comment = cand.comment or ""
+        local preedit = cand.preedit or ""
 
-        if comment then
-            -- 检查拼音中的声调标记
-            -- 一声：ā ō ē ī ū ǖ
-            -- 二声：á ó é í ú ǘ
-            -- 三声：ǎ ǒ ě ǐ ǔ ǚ
-            -- 四声：à ò è ì ù ǜ
-            local tone_chars = {
-                ["1"] = "[āōēīūǖĀŌĒĪŪǕ]",
-                ["2"] = "[áóéíúǘÁÓÉÍÚǗ]",
-                ["3"] = "[ǎǒěǐǔǚǍǑĚǏǓǙ]",
-                ["4"] = "[àòèìùǜÀÒÈÌÙǛ]"
-            }
+        -- 从注释或预编辑文本中检测声调
+        local tone = get_tone_from_pinyin(comment) or get_tone_from_pinyin(preedit)
 
-            if comment:find(tone_chars[tone_mark]) then
-                yield(cand)
-            end
-        else
-            -- 没有注释的候选词直接输出
+        if tone == tone_mark then
+            yield(cand)
+            has_output = true
+        end
+    end
+
+    -- 如果没有匹配的候选词，输出所有候选词（避免空白）
+    if not has_output then
+        for cand in input:iter() do
             yield(cand)
         end
     end
