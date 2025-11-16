@@ -247,17 +247,30 @@ def generate_zero_initial_layer():
     return '\n'.join(lines)
 
 def update_trime_yaml(new_finals_content, new_zero_initial_content):
-    """更新 shengyun.trime.yaml 的韵母层部分（97-1246行）和零声母层（1247-1299行）"""
+    """更新 shengyun.trime.yaml 的韵母层部分，保留头尾配置"""
     with open(TRIME_YAML, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    # 提取三部分：
-    # 1. 头部（1-96行）：声母层等
-    # 2. 24个韵母层（97-1246行）：替换
-    # 3. 零声母层（1247-1299行）：替换
-    # 4. 尾部（1300行之后）：主键盘等
-    header = lines[:96]
-    footer = lines[1299:]
+    # 通过标记分割文件，避免硬编码行号
+    header = []
+    footer = []
+    in_header = True
+    in_footer = False
+
+    for i, line in enumerate(lines):
+        # 找到第一个韵母层标记（b 的韵母层）
+        if '# b 的韵母层' in line:
+            in_header = False
+            continue
+
+        # 找到主键盘标记（footer 开始）
+        if '# 声韵主键盘（默认显示声母层）' in line:
+            in_footer = True
+
+        if in_header:
+            header.append(line)
+        elif in_footer:
+            footer.append(line)
 
     # 组合新内容
     new_lines = header + [new_finals_content + '\n'] + [new_zero_initial_content + '\n'] + footer
@@ -267,9 +280,9 @@ def update_trime_yaml(new_finals_content, new_zero_initial_content):
         f.writelines(new_lines)
 
     print(f"✓ Updated {TRIME_YAML}")
-    print(f"  - Replaced lines 97-1246 with new finals layers (24 initials)")
-    print(f"  - Replaced lines 1247-1299 with new zero-initial layer")
+    print(f"  - Replaced 24 finals layers + zero-initial layer")
     print(f"  - Total lines: {len(new_lines)}")
+    print(f"  - Header lines: {len(header)}, Footer lines: {len(footer)}")
 
 def main():
     """主函数"""

@@ -1294,6 +1294,15 @@ preset_keyboards:
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
+  # 声韵主键盘（默认显示声母层）
+  shengyun:
+    __include: /preset_keyboards/shengyun_initials
+
+# 默认键盘映射
+preset_keys:
+  Keyboard_shengyun: {label: 声韵, send: Eisu_toggle, select: shengyun}
+  Keyboard_shengyun_initials: {label: 声母, send: Eisu_toggle, select: shengyun_initials}
+  Keyboard_shengyun_finals: {label: ⇧, send: Eisu_toggle, select: shengyun_finals}
   Keyboard_shengyun_finals_b: {label: b, send: Eisu_toggle, select: shengyun_finals_b}
   Keyboard_shengyun_finals_p: {label: p, send: Eisu_toggle, select: shengyun_finals_p}
   Keyboard_shengyun_finals_m: {label: m, send: Eisu_toggle, select: shengyun_finals_m}
