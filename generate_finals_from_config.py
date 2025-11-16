@@ -108,10 +108,12 @@ def convert_label_for_display(final, initial):
     """转换韵母为显示标签
 
     显示规则：
-    - j/q/x/y: ü→u 转换
-    - n/l: 保留 ün
-    - 其他: ün→un
+    - CSV 中的 ü 位置：所有层都显示 ü（不转换）
+    - ün 位置：j/q/x/y 显示 un，n/l 显示 ün，其他显示 un
+    - üe 位置：j/q/x/y 显示 ue，其他保留 üe
+    - uan 位置：所有层显示 uan（CSV 中就是 uan）
     """
+    # ün 位置的互补分布
     if final == 'ün':
         if initial in U_CONVERT_INITIALS:  # j/q/x/y
             return 'un'
@@ -120,10 +122,13 @@ def convert_label_for_display(final, initial):
         else:
             return 'un'
 
-    # j/q/x/y 的其他 ü 转换
-    if initial in U_CONVERT_INITIALS:
-        return final.replace('ü', 'u')
+    # üe 位置：j/q/x/y 转换为 ue
+    if final == 'üe' and initial in U_CONVERT_INITIALS:
+        return 'ue'
 
+    # 单独的 ü：所有层保持 ü 显示（CSV 第一列最后一个）
+    # uan：所有层保持 uan 显示（CSV 已经是 uan）
+    # 其他韵母：保持原样
     return final
 
 def generate_keyboard_for_initial(initial, layout_rows, mask_config):
