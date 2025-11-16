@@ -70,16 +70,16 @@ initials:
   # 舌面音（只配i系和ü系，j/q/x显示u实际发ü音）
   j:
     # ji几 jia家jie姐jiao叫jiu九 jian间jin今jiang江jing京jiong炯 ju居 jue觉jun军juan捐
-    # 注：ü/üe/ün/uan 在此层显示为 u/ue/un/uan（自动转换）
-    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, uang, ong]
+    # 注：CSV中 u 位置屏蔽，只用 ü 位置（显示为 u）
+    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, u, ua, uo, uai, ui, uang, ong]
 
   q:
     # qi七 qia恰qie切qiao桥qiu球 qian前qin琴qiang强qing青qiong穷 qu去 que却qun群quan全
-    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, uang, ong]
+    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, u, ua, uo, uai, ui, uang, ong]
 
   x:
     # xi西 xia下xie些xiao小xiu修 xian先xin新xiang香xing星xiong熊 xu需 xue学xun寻xuan选
-    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, ua, uo, uai, ui, uang, ong]
+    masked_finals: [er, a, o, e, ai, ei, ao, ou, an, en, ang, eng, u, ua, uo, uai, ui, uang, ong]
 
   # 舌尖后音（翘舌音，不配i复合韵母和ü系）
   zh:

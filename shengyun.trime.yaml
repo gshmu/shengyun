@@ -674,7 +674,7 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: jiu, select: shengyun_initials, label: "iu", width: 11.11}
       # 行3：j u, en, ing, iong, ua, uo, ou, ian, ⇧
-      - {click: ju, select: shengyun_initials, label: "u", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: jing, select: shengyun_initials, label: "ing", width: 11.11}
       - {click: jiong, select: shengyun_initials, label: "iong", width: 11.11}
@@ -724,7 +724,7 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: qiu, select: shengyun_initials, label: "iu", width: 11.11}
       # 行3：q u, en, ing, iong, ua, uo, ou, ian, ⇧
-      - {click: qu, select: shengyun_initials, label: "u", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: qing, select: shengyun_initials, label: "ing", width: 11.11}
       - {click: qiong, select: shengyun_initials, label: "iong", width: 11.11}
@@ -774,7 +774,7 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: xiu, select: shengyun_initials, label: "iu", width: 11.11}
       # 行3：x u, en, ing, iong, ua, uo, ou, ian, ⇧
-      - {click: xu, select: shengyun_initials, label: "u", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: xing, select: shengyun_initials, label: "ing", width: 11.11}
       - {click: xiong, select: shengyun_initials, label: "iong", width: 11.11}
