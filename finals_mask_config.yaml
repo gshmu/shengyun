@@ -11,7 +11,7 @@
 # u, en, ing, iong, ua, uo, ou, ian,
 # ü, ün, ong, uang, uai, üe, uan, üan
 
-# 零声母层配置（通用韵母层 shengyun_finals_all）
+# 零声母层配置（通用韵母层 shengyun_finals_zero）
 zero_initial:
   # 零声母音节：能单独成音节的韵母（不需要 y/w 标记）
   # 可用：a, o, e, ai, ei, ao, ou, an, en, ang, eng, ong, er

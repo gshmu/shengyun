@@ -80,7 +80,7 @@ preset_keyboards:
       - {click: Keyboard_shengyun_finals_q, label: "q", width: 12.5, send_bindings: false}
       - {click: Keyboard_shengyun_finals_x, label: "x", width: 12.5, send_bindings: false}
       - {click: Keyboard_shengyun_finals_r, label: "r", width: 12.5, send_bindings: false}
-      - {click: Keyboard_shengyun_finals, long_click: Keyboard_shengyun_finals_zero, label: "⇧", width: 12.5, send_bindings: false, hilited: true}
+      - {click: Keyboard_shengyun_finals_zero, long_click: Keyboard_shengyun_finals, label: "⇧", width: 12.5, send_bindings: false, hilited: true}
 
       # 第四行：平舌音 + 翘舌音 + y w + 空格 + 删除 (z c s zh ch sh y w ␣ ⌫)
       - {click: Keyboard_shengyun_finals_z, label: "z", width: 10, send_bindings: false}
@@ -1291,6 +1291,56 @@ preset_keyboards:
       - {click: uai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: ve, select: shengyun_initials, label: "üe", width: 11.11}
       - {click: uan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: "␣", width: 11.11}
+      - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
+
+  # 零声母韵母层（独立可用的韵母，不需要声母）
+  shengyun_finals_zero:
+    name: 零声母层
+    author: shengyun
+    ascii_mode: 0
+    width: 11.11
+    height: 70
+    lock: true
+    keys:
+      # 行1：er an ang a e ao ia iao ui
+      - {click: er, select: shengyun_initials, label: "er", width: 11.11}
+      - {click: an, select: shengyun_initials, label: "an", width: 11.11}
+      - {click: ang, select: shengyun_initials, label: "ang", width: 11.11}
+      - {click: a, select: shengyun_initials, label: "a", width: 11.11}
+      - {click: e, select: shengyun_initials, label: "e", width: 11.11}
+      - {click: ao, select: shengyun_initials, label: "ao", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      # 行2：i in eng iang ai ei ie o iu
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: eng, select: shengyun_initials, label: "eng", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: ai, select: shengyun_initials, label: "ai", width: 11.11}
+      - {click: ei, select: shengyun_initials, label: "ei", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: o, select: shengyun_initials, label: "o", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      # 行3：u en ing iong ua uo ou ian ⇧
+      - {click: space, label: " ", width: 11.11}
+      - {click: en, select: shengyun_initials, label: "en", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: ou, select: shengyun_initials, label: "ou", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
+      # 行4：ü ün ong uang uai üe uan ␣ ⌫
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: ong, select: shengyun_initials, label: "ong", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 

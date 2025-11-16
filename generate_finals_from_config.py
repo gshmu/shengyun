@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-根据配置文件生成24个声母的韵母层键盘布局
+根据配置文件生成声韵输入法的韵母层键盘布局
 
 输入文件：
 - finals_all.csv: 35个韵母的9列布局
 - finals_mask_config.yaml: 每个声母的屏蔽韵母配置
 
 输出：
-- 直接更新 shengyun.trime.yaml 的第97-1246行（24个韵母层）
+- 直接更新 shengyun.trime.yaml，生成以下内容：
+  1. 24个声母的专用韵母层（shengyun_finals_b ~ shengyun_finals_w）
+  2. 通用韵母全览层（shengyun_finals）- 显示所有35个韵母
+  3. 零声母韵母层（shengyun_finals_zero）- 只显示独立可用的韵母
 """
 
 import csv
@@ -198,17 +201,57 @@ def generate_all_finals_layers():
 
     return '\n'.join(all_lines)
 
+def generate_finals_all_layer():
+    """生成通用韵母全览层（shengyun_finals）- 显示所有35个韵母"""
+    layout_rows = read_finals_layout()
+
+    lines = []
+    lines.append(f"  # 通用韵母层（显示所有韵母，用于所有声母的调试预览）")
+    lines.append(f"  shengyun_finals:")
+    lines.append(f"    name: 韵母全览")
+    lines.append(f"    author: shengyun")
+    lines.append(f"    ascii_mode: 0")
+    lines.append(f"    width: 11.11")
+    lines.append(f"    height: 70")
+    lines.append(f"    lock: true")
+    lines.append(f"    keys:")
+
+    for row_idx, row in enumerate(layout_rows, 1):
+        # 构建行注释
+        row_comment = ' '.join(row)
+        lines.append(f"      # 行{row_idx}：{row_comment}")
+
+        for col_idx, final in enumerate(row, 1):
+            # 特殊控制键
+            if final == '⇧':
+                lines.append(f"      - {{click: Keyboard_shengyun_initials, label: \"⇧\", width: 11.11, send_bindings: false, hilited: true}}")
+                continue
+            elif final == '␣':
+                lines.append(f"      - {{click: space, label: \"␣\", width: 11.11}}")
+                continue
+            elif final == '⌫':
+                lines.append(f"      - {{click: BackSpace, label: \"⌫\", width: 11.11, repeat: true}}")
+                continue
+
+            # 普通韵母按钮 - 全部显示
+            # ü 需要转换为 v（RIME 输入码）
+            click_value = final.replace('ü', 'v')
+            lines.append(f"      - {{click: {click_value}, select: shengyun_initials, label: \"{final}\", width: 11.11}}")
+
+    lines.append("")
+    return '\n'.join(lines)
+
 def generate_zero_initial_layer():
-    """生成零声母层（shengyun_finals_all）"""
+    """生成零声母层（shengyun_finals_zero）- 只显示独立可用的韵母"""
     layout_rows = read_finals_layout()
     _, zero_config = read_mask_config()
 
     masked_finals = set(zero_config.get('masked_finals', []))
 
     lines = []
-    lines.append(f"  # 通用韵母层（显示所有35个韵母，西文模式专用，9列布局）")
-    lines.append(f"  shengyun_finals_all:")
-    lines.append(f"    name: 韵母层-全部")
+    lines.append(f"  # 零声母韵母层（独立可用的韵母，不需要声母）")
+    lines.append(f"  shengyun_finals_zero:")
+    lines.append(f"    name: 零声母层")
     lines.append(f"    author: shengyun")
     lines.append(f"    ascii_mode: 0")
     lines.append(f"    width: 11.11")
@@ -246,7 +289,7 @@ def generate_zero_initial_layer():
     lines.append("")
     return '\n'.join(lines)
 
-def update_trime_yaml(new_finals_content, new_zero_initial_content):
+def update_trime_yaml(new_finals_content, new_finals_all_content, new_zero_initial_content):
     """更新 shengyun.trime.yaml 的韵母层部分，保留头尾配置"""
     with open(TRIME_YAML, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -272,15 +315,15 @@ def update_trime_yaml(new_finals_content, new_zero_initial_content):
         elif in_footer:
             footer.append(line)
 
-    # 组合新内容
-    new_lines = header + [new_finals_content + '\n'] + [new_zero_initial_content + '\n'] + footer
+    # 组合新内容：24个声母层 + 通用韵母全览层 + 零声母层
+    new_lines = header + [new_finals_content + '\n'] + [new_finals_all_content + '\n'] + [new_zero_initial_content + '\n'] + footer
 
     # 写回文件
     with open(TRIME_YAML, 'w', encoding='utf-8') as f:
         f.writelines(new_lines)
 
     print(f"✓ Updated {TRIME_YAML}")
-    print(f"  - Replaced 24 finals layers + zero-initial layer")
+    print(f"  - Replaced 24 finals layers + finals_all layer + zero-initial layer")
     print(f"  - Total lines: {len(new_lines)}")
     print(f"  - Header lines: {len(header)}, Footer lines: {len(footer)}")
 
@@ -297,14 +340,21 @@ def main():
     finals_content = generate_all_finals_layers()
     print(f"✓ Generated 24 finals layers")
 
+    # 生成通用韵母全览层
+    print("Generating finals-all layer (shengyun_finals)...")
+    finals_all_content = generate_finals_all_layer()
+    print(f"✓ Generated finals-all layer (shengyun_finals)")
+
     # 生成零声母层
-    print("Generating zero-initial layer...")
+    print("Generating zero-initial layer (shengyun_finals_zero)...")
     zero_initial_content = generate_zero_initial_layer()
-    print(f"✓ Generated zero-initial layer (shengyun_finals_all)")
+    print(f"✓ Generated zero-initial layer (shengyun_finals_zero)")
 
     # 保存到临时文件（可选，用于查看）
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write(finals_content)
+        f.write('\n')
+        f.write(finals_all_content)
         f.write('\n')
         f.write(zero_initial_content)
     print(f"✓ Saved to {OUTPUT_FILE} (for review)")
@@ -312,7 +362,7 @@ def main():
     # 更新主配置文件
     print()
     print("Updating shengyun.trime.yaml...")
-    update_trime_yaml(finals_content, zero_initial_content)
+    update_trime_yaml(finals_content, finals_all_content, zero_initial_content)
 
     print()
     print("Done! You can now:")

@@ -151,7 +151,7 @@ ueng [wəŋ] (rare)                                  # 罕见
    - 行2列2：ai（固定位置）
    - 行4底部：ang, eng, ing, ong（后鼻音）
 
-### 通用韵母层布局（shengyun_finals_all）
+### 通用韵母层布局（shengyun_finals）
 
 **适用场景**：零声母输入、西文显示模式
 
@@ -253,7 +253,7 @@ ueng [wəŋ] (rare)                                  # 罕见
 
 | 声母层 | 行3列3位置 | 行4列8位置 | 说明 |
 |-------|----------|----------|------|
-| shengyun_finals_all | uan | ün | 通用层 |
+| shengyun_finals | uan | ün | 通用层 |
 | shengyun_finals_j | üan | ün | j/q/x/y层特殊显示 |
 | shengyun_finals_b | uan 或 空 | un 或 空 | 根据拼音规则显示 |
 | shengyun_finals_zh | uan | un | 翘舌音不配ü系 |
