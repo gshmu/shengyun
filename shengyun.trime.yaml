@@ -55,12 +55,12 @@ preset_keyboards:
       - {click: "2", label: "2", width: 10, key_text_size: 20}
       - {click: "3", label: "3", width: 10, key_text_size: 20}
       - {click: "4", label: "4", width: 10, key_text_size: 20}
-      - {click: "：", long_click: "5", label: "：\n5", width: 10, key_text_size: 16, key_long_text_size: 12}
-      - {click: "、", long_click: "6", label: "、\n6", width: 10, key_text_size: 16, key_long_text_size: 12}
-      - {click: "？", long_click: "7", label: "？\n7", width: 10, key_text_size: 16, key_long_text_size: 12}
-      - {click: "！", long_click: "8", label: "！\n8", width: 10, key_text_size: 16, key_long_text_size: 12}
-      - {click: "，", long_click: "9", label: "，\n9", width: 10, key_text_size: 16, key_long_text_size: 12}
-      - {click: "。", long_click: "0", label: "。\n0", width: 10, key_text_size: 16, key_long_text_size: 12}
+      - {click: "：", long_click: "5", label: "：", width: 10, key_text_size: 20}
+      - {click: "、", long_click: "6", label: "、", width: 10, key_text_size: 20}
+      - {click: "？", long_click: "7", label: "？", width: 10, key_text_size: 20}
+      - {click: "！", long_click: "8", label: "！", width: 10, key_text_size: 20}
+      - {click: "，", long_click: "9", label: "，", width: 10, key_text_size: 20}
+      - {click: "。", long_click: "0", label: "。", width: 10, key_text_size: 20}
 
       # 第二行：唇音 + 舌尖音 (b p m f d t n l)
       - {click: Keyboard_shengyun_finals_b, label: "b", width: 12.5, send_bindings: false}
