@@ -91,40 +91,51 @@ def convert_final_for_click(final, initial):
     """转换 CSV 中的韵母为实际 RIME 输入码
 
     互补分布规则：
-    - ün 位置：j/q/x/y/n/l 用 ün（或 v），其他用 un
-    - uan 位置：所有声母都用 uan
+    - ün 位置：j/q/x/y 用 vn（RIME中ü用v表示），其他用 un
+    - üan 位置：j/q/x/y 用 van（RIME中ü用v表示），其他用 uan
+
+    注意：RIME 中 ü 统一用 v 表示
     """
     # ün/un 互补分布
     if final == 'ün':
-        # j/q/x/y: jun (RIME识别为jün), n/l: nün/lün
         if initial in {'j', 'q', 'x', 'y'}:
-            return 'un'  # j+un → jun，RIME自动识别为jün
-        elif initial in {'n', 'l'}:
-            return 'ün'  # n+ün → nün
+            return 'vn'  # j+vn → jvn，RIME识别为jün（居）
         else:
-            return 'un'  # k+un → kun
+            return 'un'  # l+un → lun（论），其他声母同理
 
-    # 其他韵母正常处理
+    # üan/uan 互补分布
+    if final == 'üan':
+        if initial in {'j', 'q', 'x', 'y'}:
+            return 'van'  # j+van → jvan，RIME识别为jüan（捐）
+        else:
+            return 'uan'  # l+uan → luan（乱），其他声母同理
+
+    # 其他 ü 系韵母：统一转换为 v
+    final = final.replace('ü', 'v')
+
     return final
 
 def convert_label_for_display(final, initial):
     """转换韵母为显示标签
 
-    显示规则（按汉语拼音标准写法）：
-    - j/q/x/y 层的 ü 系韵母：转换为 u 写法（ü→u, üe→ue, ün→un, üan→uan）
-    - 其他层的 ün：n/l 显示 ün，其他显示 un
-    - 其他韵母：保持原样
+    显示规则（如实显示韵母本身）：
+    - j/q/x/y 层：所有韵母如实显示，包括 ü/ün/üe/üan
+    - 其他层：
+      * ün → un（互补分布）
+      * üan → uan（互补分布）
+      * 其他韵母保持原样
     """
-    # j/q/x/y 层：所有 ü 系韵母转换为 u 显示（拼音写法）
+    # j/q/x/y 层：所有韵母如实显示
     if initial in U_CONVERT_INITIALS:
-        return final.replace('ü', 'u')
+        return final
 
-    # ün 位置的互补分布（其他层）
+    # 其他层：ün 显示为 un
     if final == 'ün':
-        if initial in {'n', 'l'}:
-            return 'ün'  # n/l 保留 ün
-        else:
-            return 'un'  # 其他显示 un
+        return 'un'
+
+    # 其他层：üan 显示为 uan（互补分布）
+    if final == 'üan':
+        return 'uan'
 
     # 其他韵母保持原样
     return final

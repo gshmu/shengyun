@@ -133,7 +133,7 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: bian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：b ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：b ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -183,7 +183,7 @@ preset_keyboards:
       - {click: pou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: pian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：p ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：p ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -233,7 +233,7 @@ preset_keyboards:
       - {click: mou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: mian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：m ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：m ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -283,7 +283,7 @@ preset_keyboards:
       - {click: fou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：f ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：f ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -333,14 +333,14 @@ preset_keyboards:
       - {click: dou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: dian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：d ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：d ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: dong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: duan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -383,14 +383,14 @@ preset_keyboards:
       - {click: tou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: tian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：t ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：t ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: tong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: tuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -433,13 +433,13 @@ preset_keyboards:
       - {click: nou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: nian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：n ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: nü, select: shengyun_initials, label: "ü", width: 11.11}
-      - {click: nün, select: shengyun_initials, label: "ün", width: 11.11}
+      # 行4：n ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
+      - {click: nv, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: nun, select: shengyun_initials, label: "un", width: 11.11}
       - {click: nong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: nüe, select: shengyun_initials, label: "üe", width: 11.11}
+      - {click: nve, select: shengyun_initials, label: "üe", width: 11.11}
       - {click: nuan, select: shengyun_initials, label: "uan", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
@@ -475,21 +475,21 @@ preset_keyboards:
       - {click: liu, select: shengyun_initials, label: "iu", width: 11.11}
       # 行3：l u, en, ing, iong, ua, uo, ou, ian, ⇧
       - {click: lu, select: shengyun_initials, label: "u", width: 11.11}
-      - {click: len, select: shengyun_initials, label: "en", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: ling, select: shengyun_initials, label: "ing", width: 11.11}
-      - {click: liong, select: shengyun_initials, label: "iong", width: 11.11}
-      - {click: lua, select: shengyun_initials, label: "ua", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: luo, select: shengyun_initials, label: "uo", width: 11.11}
       - {click: lou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: lian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：l ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: lü, select: shengyun_initials, label: "ü", width: 11.11}
-      - {click: lün, select: shengyun_initials, label: "ün", width: 11.11}
+      # 行4：l ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
+      - {click: lv, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: lun, select: shengyun_initials, label: "un", width: 11.11}
       - {click: long, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: lüe, select: shengyun_initials, label: "üe", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: luan, select: shengyun_initials, label: "uan", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
@@ -533,14 +533,14 @@ preset_keyboards:
       - {click: gou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：g ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：g ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: gong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: guang, select: shengyun_initials, label: "uang", width: 11.11}
       - {click: guai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: guan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -583,14 +583,14 @@ preset_keyboards:
       - {click: kou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：k ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：k ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: kong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: kuang, select: shengyun_initials, label: "uang", width: 11.11}
       - {click: kuai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: kuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -633,14 +633,14 @@ preset_keyboards:
       - {click: hou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：h ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：h ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: hong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: huang, select: shengyun_initials, label: "uang", width: 11.11}
       - {click: huai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: huan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -683,14 +683,14 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: jian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：j ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: jü, select: shengyun_initials, label: "u", width: 11.11}
-      - {click: jun, select: shengyun_initials, label: "un", width: 11.11}
+      # 行4：j ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
+      - {click: jv, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: jvn, select: shengyun_initials, label: "ün", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: jüe, select: shengyun_initials, label: "ue", width: 11.11}
-      - {click: space, label: " ", width: 11.11}
+      - {click: jve, select: shengyun_initials, label: "üe", width: 11.11}
+      - {click: jvan, select: shengyun_initials, label: "üan", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -733,14 +733,14 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: qian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：q ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: qü, select: shengyun_initials, label: "u", width: 11.11}
-      - {click: qun, select: shengyun_initials, label: "un", width: 11.11}
+      # 行4：q ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
+      - {click: qv, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: qvn, select: shengyun_initials, label: "ün", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: qüe, select: shengyun_initials, label: "ue", width: 11.11}
-      - {click: space, label: " ", width: 11.11}
+      - {click: qve, select: shengyun_initials, label: "üe", width: 11.11}
+      - {click: qvan, select: shengyun_initials, label: "üan", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -783,14 +783,14 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: xian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：x ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: xü, select: shengyun_initials, label: "u", width: 11.11}
-      - {click: xun, select: shengyun_initials, label: "un", width: 11.11}
+      # 行4：x ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
+      - {click: xv, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: xvn, select: shengyun_initials, label: "ün", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: xüe, select: shengyun_initials, label: "ue", width: 11.11}
-      - {click: space, label: " ", width: 11.11}
+      - {click: xve, select: shengyun_initials, label: "üe", width: 11.11}
+      - {click: xvan, select: shengyun_initials, label: "üan", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -833,14 +833,14 @@ preset_keyboards:
       - {click: zhou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：zh ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：zh ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: zhong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: zhuang, select: shengyun_initials, label: "uang", width: 11.11}
       - {click: zhuai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: zhuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -883,14 +883,14 @@ preset_keyboards:
       - {click: chou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：ch ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：ch ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: chong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: chuang, select: shengyun_initials, label: "uang", width: 11.11}
       - {click: chuai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: chuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -933,14 +933,14 @@ preset_keyboards:
       - {click: shou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：sh ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：sh ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: shuang, select: shengyun_initials, label: "uang", width: 11.11}
       - {click: shuai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: shuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -983,14 +983,14 @@ preset_keyboards:
       - {click: rou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：r ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：r ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: rong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: ruan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -1033,14 +1033,14 @@ preset_keyboards:
       - {click: zou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：z ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：z ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: zong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: zuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -1083,14 +1083,14 @@ preset_keyboards:
       - {click: cou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：c ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：c ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: cong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: cuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -1133,14 +1133,14 @@ preset_keyboards:
       - {click: sou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：s ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：s ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: song, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: suan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: space, label: " ", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -1183,14 +1183,14 @@ preset_keyboards:
       - {click: you, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：y ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: yü, select: shengyun_initials, label: "u", width: 11.11}
-      - {click: yun, select: shengyun_initials, label: "un", width: 11.11}
+      # 行4：y ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
+      - {click: yv, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: yvn, select: shengyun_initials, label: "ün", width: 11.11}
       - {click: yong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
-      - {click: yüe, select: shengyun_initials, label: "ue", width: 11.11}
-      - {click: yuan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: yve, select: shengyun_initials, label: "üe", width: 11.11}
+      - {click: yvan, select: shengyun_initials, label: "üan", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -1233,7 +1233,7 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：w ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
+      # 行4：w ü, ün, ong, uang, uai, üe, üan, ␣, ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -1283,14 +1283,14 @@ preset_keyboards:
       - {click: ou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: ian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：ü ün ong uang uai üe uan ␣ ⌫
+      # 行4：ü ün ong uang uai üe üan ␣ ⌫
       - {click: v, select: shengyun_initials, label: "ü", width: 11.11}
       - {click: vn, select: shengyun_initials, label: "ün", width: 11.11}
       - {click: ong, select: shengyun_initials, label: "ong", width: 11.11}
       - {click: uang, select: shengyun_initials, label: "uang", width: 11.11}
       - {click: uai, select: shengyun_initials, label: "uai", width: 11.11}
       - {click: ve, select: shengyun_initials, label: "üe", width: 11.11}
-      - {click: uan, select: shengyun_initials, label: "uan", width: 11.11}
+      - {click: van, select: shengyun_initials, label: "üan", width: 11.11}
       - {click: space, label: "␣", width: 11.11}
       - {click: BackSpace, label: "⌫", width: 11.11, repeat: true}
 
@@ -1333,7 +1333,7 @@ preset_keyboards:
       - {click: ou, select: shengyun_initials, label: "ou", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
-      # 行4：ü ün ong uang uai üe uan ␣ ⌫
+      # 行4：ü ün ong uang uai üe üan ␣ ⌫
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: ong, select: shengyun_initials, label: "ong", width: 11.11}
@@ -1352,7 +1352,7 @@ preset_keyboards:
 preset_keys:
   Keyboard_shengyun: {label: 声韵, send: Eisu_toggle, select: shengyun}
   Keyboard_shengyun_initials: {label: 声母, send: Eisu_toggle, select: shengyun_initials}
-  Keyboard_shengyun_finals: {label: ⇧, send: Eisu_toggle, select: shengyun_finals}
+  Keyboard_shengyun_finals: {label: " ", send: Eisu_toggle, select: shengyun_finals}
   Keyboard_shengyun_finals_b: {label: b, send: Eisu_toggle, select: shengyun_finals_b}
   Keyboard_shengyun_finals_p: {label: p, send: Eisu_toggle, select: shengyun_finals_p}
   Keyboard_shengyun_finals_m: {label: m, send: Eisu_toggle, select: shengyun_finals_m}
@@ -1376,4 +1376,4 @@ preset_keys:
   Keyboard_shengyun_finals_s: {label: s, send: Eisu_toggle, select: shengyun_finals_s}
   Keyboard_shengyun_finals_y: {label: y, send: Eisu_toggle, select: shengyun_finals_y}
   Keyboard_shengyun_finals_w: {label: w, send: Eisu_toggle, select: shengyun_finals_w}
-  Keyboard_shengyun_finals_zero: {label: " ", send: Eisu_toggle, select: shengyun_finals_zero}
+  Keyboard_shengyun_finals_zero: {label: ⇧, send: Eisu_toggle, select: shengyun_finals_zero}
