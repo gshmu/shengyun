@@ -39,6 +39,24 @@ style:
   preview_text_size: 48                       # 大按键预览
   preview_height: 80                          # 高预览区
   keyboard_height: 320                        # 固定键盘高度
+  liquid_keyboard: true                       # 启用液态键盘（状态栏）
+  horizontal: true                            # 水平候选栏
+  candidate_use_cursor: true                  # 使用光标高亮候选词
+
+# 功能栏配置（键盘上方的状态栏）
+tool_bar:
+  button_spacing: 5
+
+  ime_switch_button: &ime_switch_button
+    foreground:
+      style: "⌨️"
+      font_size: 18
+      fg_normal: 0x888888
+      padding: 10
+    action: IME_switch
+
+  # 右侧按钮列表
+  buttons: [ *ime_switch_button ]
 
 # 声韵分层键盘布局
 preset_keyboards:
@@ -1350,6 +1368,9 @@ preset_keyboards:
 
 # 默认键盘映射
 preset_keys:
+  # 功能栏按钮定义
+  IME_switch: {label: ⌨️, send: LANGUAGE_SWITCH}                    # 切换系统输入法
+
   Keyboard_shengyun: {label: 声韵, send: Eisu_toggle, select: shengyun}
   Keyboard_shengyun_initials: {label: 声母, send: Eisu_toggle, select: shengyun_initials}
   Keyboard_shengyun_finals: {label: " ", send: Eisu_toggle, select: shengyun_finals}
