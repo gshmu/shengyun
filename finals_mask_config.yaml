@@ -48,12 +48,14 @@ initials:
   n:
     # na拿 ne呢 nai奶 nei内 nao脑 nou耨 nan男 nen嫩 nang囊 neng能 nie捏 niao鸟 niu牛 nian年 nin您 niang娘 ning宁 nu奴 nuo诺 nuan暖 nong农 nü女 nüe虐
     # 注：n/l 是唯一可配所有韵母的声母（包括 ü 系）
-    masked_finals: [er, uai, uang]
+    # 但CSV中的ia/ui/uai是复合形式，n不直接用（n+i+a=nia不存在）
+    masked_finals: [er, ia, ui, uai, uang]
 
   l:
     # la拉 le勒 lo咯 lai来 lei累 lao老 lou楼 lan蓝 lang狼 leng楞 lie列 liao料 liu六 lian连 lin林 liang两 ling灵 lu路 luo落 luan乱 lun论 long龙 lü绿 lüe略
     # 注：n/l 是唯一可配所有韵母的声母（包括 ü 系）
-    masked_finals: [er, uai, uang]
+    # 但CSV中的ia/ui/uai是复合形式，l不直接用（l+i+a=lia不存在）
+    masked_finals: [er, ia, ui, uai, uang]
 
   # 舌根音（不配 i 系和 ü 系）
   g:

@@ -271,7 +271,9 @@ ueng [wəŋ] (rare)                                  # 罕见
 schema:
   schema_id: shengyun           # 方案唯一标识
   name: 声韵拼音                 # 显示名称
-  version: "1.0.0"
+  version: "1.0.1"
+  author:
+    - gshmu (https://gshmu.com)
   dependencies:
     - luna_pinyin               # 依赖朙月拼音词库
 ```
@@ -701,6 +703,72 @@ adb shell ls -lh /sdcard/rime/build/
 
 ## 维护指南
 
+### 版本管理最佳实践
+
+**重要原则**：使用 Git 版本控制，避免手动创建 `.backup` 文件
+
+#### 推荐工作流程
+
+1. **修改配置前**：
+```bash
+# 查看当前状态
+git status
+git diff finals_mask_config.yaml
+```
+
+2. **修改配置文件**：
+```bash
+# 编辑 finals_mask_config.yaml
+# 运行生成脚本
+python3 generate_finals_from_config.py
+```
+
+3. **提交更改**：
+```bash
+# 查看更改
+git diff
+
+# 提交到本地仓库
+git add finals_mask_config.yaml shengyun.trime.yaml
+git commit -m "fix: correct l + iang finals mask"
+
+# 推送到远程仓库
+git push
+```
+
+4. **回滚错误更改**：
+```bash
+# 回滚单个文件（未提交的更改）
+git restore finals_mask_config.yaml
+
+# 回滚到上一次提交
+git reset --hard HEAD
+
+# 查看历史版本
+git log --oneline
+git show <commit-hash>:finals_mask_config.yaml > finals_mask_config.yaml
+```
+
+#### 避免使用 backup 文件
+
+❌ **不推荐**：
+```bash
+cp finals_mask_config.yaml finals_mask_config.yaml.backup
+```
+
+✅ **推荐**：
+```bash
+git stash  # 临时保存更改
+# 或
+git commit -m "wip: testing l + iang fix"  # 提交工作进度
+```
+
+**原因**：
+- Git 提供完整的版本历史和差异对比
+- backup 文件容易遗忘、冲突、占用空间
+- Git 支持回滚、比较、协作等高级功能
+- GitHub 提供云端备份和多设备同步
+
 ### 修改键盘布局
 
 #### 添加新按键
@@ -859,6 +927,19 @@ translator:
 ---
 
 ## 项目历史
+
+### 2025-11-16 - v1.0.1
+- ✅ 修复关键声韵组合缺失 bug
+  - l + iang (两、亮、量)
+  - n + iang/in/uan/ong/ui (娘、您、暖、农)
+  - c/s + en (层、森)
+  - y + in (因)
+- ✅ 修正 y/w 假声母配置
+  - y: 正确配置 i系和ü系 + 单独韵母 (yi, ya, ye, yao, you, yan, yang, yin, ying, yong, yu, yue, yun, yuan)
+  - w: 正确配置 u系 + 单独韵母 (wu, wa, we, wai, wei, wan, wang, weng, wen)
+- ✅ 更新 author 信息：gshmu (https://gshmu.com)
+- ✅ 优化文档：添加版本管理最佳实践（使用 Git 而非 .backup 文件）
+- ✅ 更新 schema.yaml 描述：明确 y/w 为"假声母"，零声母特指不含声母和假声母的独立韵母
 
 ### 2025-11-15 - v1.1.1
 - ✅ 声母层第一行支持常用标点输入
