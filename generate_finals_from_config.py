@@ -107,28 +107,23 @@ def convert_final_for_click(final, initial):
 def convert_label_for_display(final, initial):
     """转换韵母为显示标签
 
-    显示规则：
-    - CSV 中的 ü 位置：所有层都显示 ü（不转换）
-    - ün 位置：j/q/x/y 显示 un，n/l 显示 ün，其他显示 un
-    - üe 位置：j/q/x/y 显示 ue，其他保留 üe
-    - uan 位置：所有层显示 uan（CSV 中就是 uan）
+    显示规则（按汉语拼音标准写法）：
+    - j/q/x/y 层的 ü 系韵母：转换为 u 写法（ü→u, üe→ue, ün→un, üan→uan）
+    - 其他层的 ün：n/l 显示 ün，其他显示 un
+    - 其他韵母：保持原样
     """
-    # ün 位置的互补分布
+    # j/q/x/y 层：所有 ü 系韵母转换为 u 显示（拼音写法）
+    if initial in U_CONVERT_INITIALS:
+        return final.replace('ü', 'u')
+
+    # ün 位置的互补分布（其他层）
     if final == 'ün':
-        if initial in U_CONVERT_INITIALS:  # j/q/x/y
-            return 'un'
-        elif initial in {'n', 'l'}:
-            return 'ün'
+        if initial in {'n', 'l'}:
+            return 'ün'  # n/l 保留 ün
         else:
-            return 'un'
+            return 'un'  # 其他显示 un
 
-    # üe 位置：j/q/x/y 转换为 ue
-    if final == 'üe' and initial in U_CONVERT_INITIALS:
-        return 'ue'
-
-    # 单独的 ü：所有层保持 ü 显示（CSV 第一列最后一个）
-    # uan：所有层保持 uan 显示（CSV 已经是 uan）
-    # 其他韵母：保持原样
+    # 其他韵母保持原样
     return final
 
 def generate_keyboard_for_initial(initial, layout_rows, mask_config):

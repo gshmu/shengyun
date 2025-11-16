@@ -684,7 +684,7 @@ preset_keyboards:
       - {click: jian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
       # 行4：j ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: jü, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: jü, select: shengyun_initials, label: "u", width: 11.11}
       - {click: jun, select: shengyun_initials, label: "un", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -734,7 +734,7 @@ preset_keyboards:
       - {click: qian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
       # 行4：q ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: qü, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: qü, select: shengyun_initials, label: "u", width: 11.11}
       - {click: qun, select: shengyun_initials, label: "un", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -784,7 +784,7 @@ preset_keyboards:
       - {click: xian, select: shengyun_initials, label: "ian", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
       # 行4：x ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: xü, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: xü, select: shengyun_initials, label: "u", width: 11.11}
       - {click: xun, select: shengyun_initials, label: "un", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
@@ -1184,7 +1184,7 @@ preset_keyboards:
       - {click: space, label: " ", width: 11.11}
       - {click: Keyboard_shengyun_initials, label: "⇧", width: 11.11, send_bindings: false, hilited: true}
       # 行4：y ü, ün, ong, uang, uai, üe, uan, ␣, ⌫
-      - {click: yü, select: shengyun_initials, label: "ü", width: 11.11}
+      - {click: yü, select: shengyun_initials, label: "u", width: 11.11}
       - {click: yun, select: shengyun_initials, label: "un", width: 11.11}
       - {click: space, label: " ", width: 11.11}
       - {click: space, label: " ", width: 11.11}
