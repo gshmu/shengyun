@@ -1,6 +1,9 @@
 # 生成的中间文件
 finals_generated.yaml
 
+# Release 包
+*.zip
+
 # Python cache
 __pycache__/
 *.pyc
