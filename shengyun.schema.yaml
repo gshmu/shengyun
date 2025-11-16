@@ -63,11 +63,11 @@ engine:
     - script_translator
   filters:
     - simplifier
-    - lua_filter@tone_filter  # 声调过滤器：支持1234过滤声调
+    # - lua_filter@tone_filter  # 暂时禁用：luna_pinyin 不支持声调注释
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba1234  # 添加1234用于声调过滤
+  alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
   algebra:
     # 声韵输入方案的拼写代数
