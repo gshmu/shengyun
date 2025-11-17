@@ -13,21 +13,6 @@ schema:
   description: |
     声母+韵母分层输入的拼音方案
     专为学习拼音的幼儿园儿童设计
-
-    输入方式：
-    1. 先点击声母（b/p/m/f/d/t/n/l/g/k/h/j/q/x/zh/ch/sh/r/z/c/s）或假声母（y/w）
-       → 自动切换到韵母层
-    2. 再点击韵母（a/o/e/i/u/ü及其组合）
-       → 自动切换回声母层
-    3. 完成拼音输入，仅需2次点击
-
-    注：零声母特指不含声母和假声母的独立韵母（a/o/e/ai/ei/ao/ou/an/en/ang/eng/ong/er）
-
-    示例：
-    - liang（两）= l + iang
-    - zhang（张）= zh + ang
-    - ju（居）= j + u（实际是jü）
-    - yi（一）= y + i（y为假声母）
   dependencies:
     - terra_pinyin
 

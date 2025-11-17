@@ -1,19 +1,8 @@
-# 生成的中间文件
-finals_generated.yaml
-
-# Release 包
+.idea/
+.venv/
 *.zip
 
-# Python cache
 __pycache__/
 *.pyc
 *.pyo
-
-# IDE
-.idea/
-.vscode/
-
-# 临时文件
-*.tmp
-*.bak
-.DS_Store
+*.pyd

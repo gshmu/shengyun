@@ -19,6 +19,11 @@
 - 英文输入 期望复用现有，但经历有限优先级不高
 - 已用Claude Code，但测试很多是手动的，暂时没有全套的自动化测试
 
+## 🛠️ 开发者
+```bash
+./generator/deploy.sh
+```
+
 ## 📥 安装方法
 - 安装 [Trime](https://github.com/osfans/trime/releases)输入法，下载本方案配置到rime目录，调整配置启用方案并重新部署
 - 推荐 https://github.com/gshmu/shengyun-rime release 界面装打包的APK

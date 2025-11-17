@@ -8,10 +8,10 @@ config_version: "3.0"
 name: 声韵输入法
 author: gshmu (https://gshmu.com)
 
-# 儿童友好的配色方案
+# 配色方案
 preset_color_schemes:
   shengyun_kids:
-    name: 声韵儿童版
+    name: 声韵
     author: gshmu
     text_color: 0x000000                      # 黑色文字
     candidate_text_color: 0x000000            # 黑色候选
@@ -27,7 +27,7 @@ preset_color_schemes:
     hilited_key_back_color: 0xFFD93D          # 黄色按键高亮
     label_color: 0x888888                     # 灰色标签
 
-# 儿童友好的样式设置
+# 样式设置
 style:
   color_scheme: shengyun_kids
   candidate_text_size: 32                     # 大候选字号

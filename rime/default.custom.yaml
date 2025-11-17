@@ -5,5 +5,5 @@
 
 patch:
   schema_list:
-    - schema: shengyun        # 声韵拼音输入方案
-    - schema: luna_pinyin     # 保留朙月拼音（可选）
+    - schema: shengyun
+    - schema: terra_pinyin
