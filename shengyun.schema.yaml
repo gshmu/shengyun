@@ -29,7 +29,7 @@ schema:
     - ju（居）= j + u（实际是jü）
     - yi（一）= y + i（y为假声母）
   dependencies:
-    - luna_pinyin
+    - terra_pinyin
 
 switches:
   - name: ascii_mode
@@ -65,11 +65,10 @@ engine:
     - script_translator
   filters:
     - simplifier
-    # - lua_filter@tone_filter  # 声调过滤暂不支持：luna_pinyin 词库不包含声调注释，需要 terra_pinyin
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba
+  alphabet: zyxwvutsrqponmlkjihgfedcba1234
   delimiter: " '"
   algebra:
     # 声韵输入方案的拼写代数
@@ -121,7 +120,7 @@ speller:
     - derive/un/uen/  # un = uen（除了 jun/qun/xun）
 
 translator:
-  dictionary: luna_pinyin
+  dictionary: terra_pinyin
   prism: shengyun
   spelling_hints: 8  # 显示拼音提示
   enable_completion: true  # 启用自动补全
@@ -134,8 +133,6 @@ translator:
     # 候选词注释格式化：显示带声调的拼音
     - xform/([nl])v/$1ü/
     - xform/([jqxy])v/$1u/
-    # 添加声调标记（从 luna_pinyin 词库）
-    - xlit/12345/¹²³⁴⁵/  # 将数字声调转换为上标
 
 punctuator:
   import_preset: default
