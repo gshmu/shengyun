@@ -56,59 +56,20 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba1234
   delimiter: " '"
   algebra:
-    # 声韵输入方案的拼写代数
+    # 最小化必需规则（零容错）
 
-    # 1. 保留原始拼音
-    - xform/^([a-z]+)$/$1/
-
-    # 2. 处理 ü 的输入（v 代表 ü）
+    # 1. 键盘输入必需：v 代表 ü
     - derive/ü/v/
 
-    # 3. j/q/x + u 等价于 j/q/x + v（都是ü的发音）
-    - derive/^([jqx])u/$1v/
-    - derive/^([jqx])v/$1u/
-    - derive/^yu/yv/
-
-    # 4. 声母简写支持
-    - abbrev/^([bpmf])([a-z]+)$/$1/
-    - abbrev/^([dtnl])([a-z]+)$/$1/
-    - abbrev/^([gkh])([a-z]+)$/$1/
-    - abbrev/^([jqx])([a-z]+)$/$1/
-    - abbrev/^(zh|ch|sh)([a-z]+)$/$1/
-    - abbrev/^([zcs])([a-z]+)$/$1/
-    - abbrev/^([yw])([a-z]+)$/$1/
-    - abbrev/^([r])([a-z]+)$/$1/
-
-    # 5. 智能过滤：阻止无效声韵组合
-
-    # j/q/x 只能配 i系和ü系（不能配a/o/e/ang/ong等）
-    - erase/^([jqx])([aoe]|a[oin]|[eo]u|[ae]ng|ong|u[ao]|uai|u[ae]ng?)$/
-
-    # zh/ch/sh/r 不能配 i复合韵母（但单独的i可以：zhi）
-    - erase/^([zcs]h|r)(ia|iao|ie|iu|i[ae]ng?|iong)$/
-    # zh/ch/sh/r/z/c/s 不能配 ü系
-    - erase/^([zcs]h?|r)v[aenu]?$/
-
-    # g/k/h 不能配 i系和ü系
-    - erase/^([gkh])(i[aeou]?|i[ae]ng?|iong|v[aenu]?)$/
-
-    # b/p/m/f 不能配 ü系和iong
-    - erase/^([bpmf])(v[aenu]?|iong)$/
-
-    # d/t 不能配 ü系（但n/l可以）
-    - erase/^([dt])v[aenu]?$/
-
-    # 6. 容错处理
-    - derive/([aeiou])([iuü])/$1$1$2/  # 允许双写元音
-    - derive/iu/iou/  # iu = iou
-    - derive/ui/uei/  # ui = uei
-    - derive/un/uen/  # un = uen（除了 jun/qun/xun）
+    # 2. 声调省略（词典带声调，必须支持无声调输入）
+    - derive/^([a-z]+)[0-5]$/$1/
 
 translator:
   dictionary: terra_pinyin
   prism: shengyun
-  spelling_hints: 8  # 显示拼音提示
-  enable_completion: true  # 启用自动补全
+  spelling_hints: 8
+  enable_completion: false  # 禁用补全
+  enable_sentence: true  # 允许整句输入
   preedit_format:
     # 显示格式化：在输入区显示正确的拼音形式
     - xform/([nl])v/$1ü/
