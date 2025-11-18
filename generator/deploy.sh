@@ -1,6 +1,5 @@
 #!/bin/bash
 # 声韵输入法：生成配置 → 打包 → 部署
-set -x
 
 set -e
 cd "$(dirname "$0")"
@@ -52,16 +51,8 @@ echo "✅ 推送完成"
 # 触发部署
 echo ""
 echo "🔧 触发 RIME 部署..."
-adb shell am broadcast -a com.osfans.trime.deploy > /dev/null 2>&1 || true
-echo "⏳ 等待 30 秒..."
-sleep 30
-
-# 检查结果
-if adb shell ls /sdcard/rime/build/shengyun.prism.bin > /dev/null 2>&1; then
-  echo "✅ 部署成功"
-else
-  echo "⚠️  未找到编译产物，请手动部署"
-fi
+adb shell am broadcast -a com.osfans.trime.action.DEPLOY > /dev/null 2>&1 || true
+echo "📢 开始部署，请在通知栏查看部署状态"
 
 echo ""
 echo "======================================="
