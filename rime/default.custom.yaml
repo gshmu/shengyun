@@ -1,9 +1,0 @@
-# SPDX-FileCopyrightText: 2025 Shengyun IME
-# SPDX-License-Identifier: GPL-3.0-or-later
-
-# 激活声韵输入方案
-
-patch:
-  schema_list:
-    - schema: shengyun
-    - schema: terra_pinyin

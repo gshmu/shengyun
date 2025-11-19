@@ -1,8 +1,0 @@
-# SPDX-FileCopyrightText: 2025 Shengyun IME
-# SPDX-License-Identifier: GPL-3.0-or-later
-
-# Trime 自定义配置 - 加载声韵键盘
-
-patch:
-  # 引入声韵键盘配置
-  __include: shengyun.trime:/
