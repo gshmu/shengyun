@@ -72,13 +72,13 @@ def load_finals_layout():
         reader = csv.reader(f)
         rows = list(reader)
 
-    # 处理互斥韵母：将 "un\nvn" 分割为 ["un", "vn"]
+    # 处理互斥韵母：将 "un|vn" 分割为 ["un", "vn"]
     processed_rows = []
     for row in rows:
         processed_row = []
         for cell in row:
-            if '\n' in cell:
-                processed_row.append(cell.split('\n'))
+            if '|' in cell:
+                processed_row.append(cell.split('|'))
             else:
                 processed_row.append(cell)
         processed_rows.append(processed_row)
@@ -115,26 +115,26 @@ def generate_keyboard_dict(initial, layout_rows, available_finals_set):
             # 第1行第1个按钮：显示声母（零声母显示 er）
             if row_idx == 1 and col_idx == 1:
                 if initial == 'zero':
-                    keys.append({'click': 'er', 'select': 'shengyun_initials', 'label': 'er', 'width': 11.11})
+                    keys.append({'click': 'er', 'select': 'shengyun_initials', 'label': 'er', 'width': 12.5})
                 else:
-                    keys.append({'click': initial, 'select': 'shengyun_initials', 'label': initial, 'width': 11.11, 'functional': True})
+                    keys.append({'click': initial, 'select': 'shengyun_initials', 'label': initial, 'width': 12.5, 'functional': True})
                 continue
 
             # 特殊控制键
             if final_options == '⇧':
                 if initial == 'zero':
-                    keys.append({'click': 'Keyboard_shengyun_finals', 'long_click': 'Keyboard_shengyun_finals', 'label': '⇧', 'width': 11.11, 'send_bindings': False, 'hilited': True})
+                    keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 12.5, 'send_bindings': False, 'hilited': True})
                 else:
-                    keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 11.11, 'send_bindings': False, 'hilited': True})
+                    keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 12.5, 'send_bindings': False, 'hilited': True})
                 continue
             elif final_options == '␣':
-                keys.append({'click': 'space', 'label': '␣', 'width': 11.11})
+                keys.append({'click': 'space', 'label': '␣', 'width': 12.5})
                 continue
             elif final_options == '⌫':
-                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': 11.11, 'repeat': True})
+                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': 12.5, 'repeat': True})
                 continue
             elif final_options == '':
-                keys.append({'click': 'space', 'label': ' ', 'width': 11.11})
+                keys.append({'click': 'space', 'label': ' ', 'width': 12.5})
                 continue
 
             # 普通韵母按钮：选择适用的韵母
@@ -142,16 +142,16 @@ def generate_keyboard_dict(initial, layout_rows, available_finals_set):
 
             if selected_final:
                 click_value = convert_final_for_click(selected_final, initial)
-                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': selected_final, 'width': 11.11})
+                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': selected_final, 'width': 12.5})
             else:
                 # 不可用韵母：显示空格
-                keys.append({'click': 'space', 'label': ' ', 'width': 11.11})
+                keys.append({'click': 'space', 'label': ' ', 'width': 12.5})
 
     return {
         'name': f'韵母层-{initial}',
         'author': 'gshmu',
         'ascii_mode': 0,
-        'width': 11.11,
+        'width': 12.5,
         'height': 70,
         'lock': True,
         'keys': keys
@@ -164,38 +164,36 @@ def generate_universal_finals_dict(layout_rows):
 
     for row_idx, row in enumerate(layout_rows, 1):
         for col_idx, final_options in enumerate(row, 1):
-            # 第1行第1个按钮：显示 "全"
             if row_idx == 1 and col_idx == 1:
-                keys.append({'click': 'space', 'label': '全', 'width': 11.11, 'functional': True})
+                keys.append({'click': 'er', 'label': 'er', 'width': 12.5, 'functional': True})
                 continue
 
-            # 特殊控制键
             if final_options == '⇧':
-                keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 11.11, 'send_bindings': False, 'hilited': True})
+                keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 12.5, 'send_bindings': False, 'hilited': True})
                 continue
             elif final_options == '␣':
-                keys.append({'click': 'space', 'label': '␣', 'width': 11.11})
+                keys.append({'click': 'space', 'label': '␣', 'width': 12.5})
                 continue
             elif final_options == '⌫':
-                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': 11.11, 'repeat': True})
+                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': 12.5, 'repeat': True})
                 continue
             elif final_options == '':
-                keys.append({'click': 'space', 'label': ' ', 'width': 11.11})
+                keys.append({'click': 'space', 'label': ' ', 'width': 12.5})
                 continue
 
-            # 互斥韵母：显示两个选项（换行）
+            # 互斥韵母
             if isinstance(final_options, list):
-                display = '\\n'.join(final_options)
-                keys.append({'click': 'space', 'label': display, 'width': 11.11})
+                long, short  = final_options
+                keys.append({'click': short, 'long_click': long, 'label': short, 'width': 12.5})
             else:
                 click_value = final_options.replace('ü', 'v')
-                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': final_options, 'width': 11.11})
+                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': final_options, 'width': 12.5})
 
     return {
         'name': '韵母层-全部',
         'author': 'gshmu',
         'ascii_mode': 0,
-        'width': 11.11,
+        'width': 12.5,
         'height': 70,
         'lock': True,
         'keys': keys
