@@ -3236,28 +3236,31 @@ preset_keyboards:
       label: y
       width: 11.11
       functional: true
-    - click: space
-      label: ' '
-      width: 11.11
-    - click: space
-      label: ' '
-      width: 11.11
-    - click: space
-      label: ' '
-      width: 11.11
-    - click: space
-      label: ' '
-      width: 11.11
-    - click: space
-      label: ' '
-      width: 11.11
-    - click: yia
+    - click: yan
       select: shengyun_initials
-      label: ia
+      label: an
       width: 11.11
-    - click: yiao
+    - click: yang
       select: shengyun_initials
-      label: iao
+      label: ang
+      width: 11.11
+    - click: ya
+      select: shengyun_initials
+      label: a
+      width: 11.11
+    - click: ye
+      select: shengyun_initials
+      label: e
+      width: 11.11
+    - click: yao
+      select: shengyun_initials
+      label: ao
+      width: 11.11
+    - click: space
+      label: ' '
+      width: 11.11
+    - click: space
+      label: ' '
       width: 11.11
     - click: space
       label: ' '
@@ -3273,19 +3276,17 @@ preset_keyboards:
     - click: space
       label: ' '
       width: 11.11
-    - click: yiang
-      select: shengyun_initials
-      label: iang
-      width: 11.11
     - click: space
       label: ' '
       width: 11.11
     - click: space
       label: ' '
       width: 11.11
-    - click: yie
-      select: shengyun_initials
-      label: ie
+    - click: space
+      label: ' '
+      width: 11.11
+    - click: space
+      label: ' '
       width: 11.11
     - click: space
       label: ' '
@@ -3303,9 +3304,8 @@ preset_keyboards:
       select: shengyun_initials
       label: ing
       width: 11.11
-    - click: yiong
-      select: shengyun_initials
-      label: iong
+    - click: space
+      label: ' '
       width: 11.11
     - click: space
       label: ' '
@@ -3317,9 +3317,8 @@ preset_keyboards:
       select: shengyun_initials
       label: ou
       width: 11.11
-    - click: yian
-      select: shengyun_initials
-      label: ian
+    - click: space
+      label: ' '
       width: 11.11
     - click: Keyboard_shengyun_initials
       label: ⇧
@@ -3333,8 +3332,9 @@ preset_keyboards:
     - click: space
       label: ' '
       width: 11.11
-    - click: space
-      label: ' '
+    - click: yong
+      select: shengyun_initials
+      label: ong
       width: 11.11
     - click: space
       label: ' '
@@ -3369,8 +3369,17 @@ preset_keyboards:
       label: w
       width: 11.11
       functional: true
-    - click: space
-      label: ' '
+    - click: wan
+      select: shengyun_initials
+      label: an
+      width: 11.11
+    - click: wang
+      select: shengyun_initials
+      label: ang
+      width: 11.11
+    - click: wa
+      select: shengyun_initials
+      label: a
       width: 11.11
     - click: space
       label: ' '
@@ -3393,20 +3402,16 @@ preset_keyboards:
     - click: space
       label: ' '
       width: 11.11
-    - click: space
-      label: ' '
+    - click: weng
+      select: shengyun_initials
+      label: eng
       width: 11.11
     - click: space
       label: ' '
       width: 11.11
-    - click: space
-      label: ' '
-      width: 11.11
-    - click: space
-      label: ' '
-      width: 11.11
-    - click: space
-      label: ' '
+    - click: wai
+      select: shengyun_initials
+      label: ai
       width: 11.11
     - click: wei
       select: shengyun_initials
@@ -3415,8 +3420,9 @@ preset_keyboards:
     - click: space
       label: ' '
       width: 11.11
-    - click: space
-      label: ' '
+    - click: wo
+      select: shengyun_initials
+      label: o
       width: 11.11
     - click: space
       label: ' '
@@ -3435,13 +3441,11 @@ preset_keyboards:
     - click: space
       label: ' '
       width: 11.11
-    - click: wua
-      select: shengyun_initials
-      label: ua
+    - click: space
+      label: ' '
       width: 11.11
-    - click: wuo
-      select: shengyun_initials
-      label: uo
+    - click: space
+      label: ' '
       width: 11.11
     - click: space
       label: ' '
@@ -3463,13 +3467,11 @@ preset_keyboards:
     - click: space
       label: ' '
       width: 11.11
-    - click: wuang
-      select: shengyun_initials
-      label: uang
+    - click: space
+      label: ' '
       width: 11.11
-    - click: wuai
-      select: shengyun_initials
-      label: uai
+    - click: space
+      label: ' '
       width: 11.11
     - click: space
       label: ' '
