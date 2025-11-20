@@ -26,28 +26,28 @@ preset_keyboards:
     lock: true
     keys:
     - click: '1'
-      long_click: '1'
-      label: ˉ
+      long_click: ！
+      label: 1ˉ
       width: 10
       key_text_size: 20
     - click: '2'
-      long_click: '2'
-      label: ˊ
+      long_click: ＠
+      label: 2ˊ
       width: 10
       key_text_size: 20
     - click: '3'
-      long_click: '3'
-      label: ˇ
+      long_click: ＃
+      label: 3ˇ
       width: 10
       key_text_size: 20
     - click: '4'
-      long_click: '4'
-      label: ˋ
+      long_click: ￥
+      label: 4ˋ
       width: 10
       key_text_size: 20
-    - click: ：
-      long_click: '5'
-      label: ：
+    - click: '5'
+      long_click: ％
+      label: '5'
       width: 10
       key_text_size: 20
     - click: 、
