@@ -21,164 +21,164 @@ preset_keyboards:
     name: 声母层
     author: gshmu
     ascii_mode: 0
-    width: 10
+    width: 10.00
     height: 70
     lock: true
     keys:
     - click: '1'
       long_click: ！
       label: 1ˉ
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: '2'
       long_click: ＠
       label: 2ˊ
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: '3'
       long_click: ＃
       label: 3ˇ
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: '4'
       long_click: ￥
       label: 4ˋ
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: '5'
       long_click: ％
       label: '5'
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: 、
       long_click: '6'
       label: 、
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: ？
       long_click: '7'
       label: ？
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: ！
       long_click: '8'
       label: ！
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: ，
       long_click: '9'
       label: ，
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: 。
       long_click: '0'
       label: 。
-      width: 10
+      width: 10.00
       key_text_size: 20
     - click: Keyboard_shengyun_finals_b
       label: b
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_p
       label: p
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_m
       label: m
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_f
       label: f
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_d
       label: d
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_t
       label: t
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_n
       label: n
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_l
       label: l
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_g
       label: g
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_k
       label: k
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_h
       label: h
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_j
       label: j
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_q
       label: q
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_x
       label: x
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_r
       label: r
-      width: 12.5
+      width: 12.50
       send_bindings: false
     - click: Keyboard_shengyun_finals_zero
       long_click: Keyboard_shengyun_finals
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: Keyboard_shengyun_finals_z
       label: z
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: Keyboard_shengyun_finals_c
       label: c
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: Keyboard_shengyun_finals_s
       label: s
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: Keyboard_shengyun_finals_zh
       label: zh
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: Keyboard_shengyun_finals_ch
       label: ch
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: Keyboard_shengyun_finals_sh
       label: sh
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: Keyboard_shengyun_finals_y
       label: y
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: Keyboard_shengyun_finals_w
       label: w
-      width: 10
+      width: 10.00
       send_bindings: false
     - click: space
       label: ␣
-      width: 10
+      width: 10.00
     - click: BackSpace
       label: ⌫
-      width: 10
+      width: 10.00
       repeat: true
   shengyun:
     __include: /preset_keyboards/shengyun_initials
@@ -186,3161 +186,3186 @@ preset_keyboards:
     name: 韵母层-zero
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: er
       select: shengyun_initials
       label: er
-      width: 12.5
+      width: 12.50
     - click: an
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: a
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: o
       select: shengyun_initials
       label: o
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: ai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: en
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: e
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: ei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: eng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_b:
     name: 韵母层-b
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: b
       select: shengyun_initials
       label: b
-      width: 12.5
+      width: 12.50
       functional: true
     - click: ban
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: bian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: ba
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: bo
       select: shengyun_initials
       label: o
-      width: 12.5
+      width: 12.50
     - click: bie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: bao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: bai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: bi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: ben
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: bing
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: biao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: bei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: bu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: bin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: bang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: beng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_p:
     name: 韵母层-p
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: p
       select: shengyun_initials
       label: p
-      width: 12.5
+      width: 12.50
       functional: true
     - click: pan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: pian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: pa
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: po
       select: shengyun_initials
       label: o
-      width: 12.5
+      width: 12.50
     - click: pie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: pao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: pai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: pi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: pen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ping
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: piao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: pou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: pei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: pu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: pin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: pang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: peng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_m:
     name: 韵母层-m
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: m
       select: shengyun_initials
       label: m
-      width: 12.5
+      width: 12.50
       functional: true
     - click: man
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: mian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: ma
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: mo
       select: shengyun_initials
       label: o
-      width: 12.5
+      width: 12.50
     - click: mie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: mao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: mai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: mi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: men
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ming
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: me
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: miao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: mou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: mei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: mu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: min
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: mang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: miu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: meng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_f:
     name: 韵母层-f
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: f
       select: shengyun_initials
       label: f
-      width: 12.5
+      width: 12.50
       functional: true
     - click: fan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: fa
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: fo
       select: shengyun_initials
       label: o
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: fen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: fou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: fei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: fu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: fang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: feng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_d:
     name: 韵母层-d
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: d
       select: shengyun_initials
       label: d
-      width: 12.5
+      width: 12.50
       functional: true
     - click: dan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: dian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: da
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: die
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: dao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: dai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: di
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: den
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: duan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: ding
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: de
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: diao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: dou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: dei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: du
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: dang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: dong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: diu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: duo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: dia
       select: shengyun_initials
       label: ia
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: dun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: deng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: dui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_t:
     name: 韵母层-t
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: t
       select: shengyun_initials
       label: t
-      width: 12.5
+      width: 12.50
       functional: true
     - click: tan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: tian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: ta
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: tie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: tao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: tai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: ti
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: tuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: ting
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: te
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: tiao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: tou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: tei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: tu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: tang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: tong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: tuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: tun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: teng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: tui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_n:
     name: 韵母层-n
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: n
       select: shengyun_initials
       label: n
-      width: 12.5
+      width: 12.50
       functional: true
     - click: nan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: nian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: na
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: nie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: nao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: nai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: ni
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: nen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: nuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: ning
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: ne
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: niao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: nou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: nei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: nu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: nin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: nang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: nong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: niu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: nuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: nv
       select: shengyun_initials
       label: v
-      width: 12.5
+      width: 12.50
     - click: nun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: neng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: niang
       select: shengyun_initials
       label: iang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: nve
       select: shengyun_initials
       label: ve
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_l:
     name: 韵母层-l
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: l
       select: shengyun_initials
       label: l
-      width: 12.5
+      width: 12.50
       functional: true
     - click: lan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: lian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: la
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: lie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: lao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: lai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: li
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: luan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: ling
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: le
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: liao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: lou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: lei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: lu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: lin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: lang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: long
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: liu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: luo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: lia
       select: shengyun_initials
       label: ia
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: lv
       select: shengyun_initials
       label: v
-      width: 12.5
+      width: 12.50
     - click: lun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: leng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: liang
       select: shengyun_initials
       label: iang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: lve
       select: shengyun_initials
       label: ve
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_g:
     name: 韵母层-g
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: g
       select: shengyun_initials
       label: g
-      width: 12.5
+      width: 12.50
       functional: true
     - click: gan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ga
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: gao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: gai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: gen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: guan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ge
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: gua
       select: shengyun_initials
       label: ua
-      width: 12.5
+      width: 12.50
     - click: gou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: gei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: gu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: gang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: gong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: guo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: gun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: geng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: guang
       select: shengyun_initials
       label: uang
-      width: 12.5
+      width: 12.50
     - click: guai
       select: shengyun_initials
       label: uai
-      width: 12.5
+      width: 12.50
     - click: gui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_k:
     name: 韵母层-k
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: k
       select: shengyun_initials
       label: k
-      width: 12.5
+      width: 12.50
       functional: true
     - click: kan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ka
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: kao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: kai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ken
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: kuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ke
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: kua
       select: shengyun_initials
       label: ua
-      width: 12.5
+      width: 12.50
     - click: kou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: kei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: ku
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: kang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: kong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: kuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: kun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: keng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: kuang
       select: shengyun_initials
       label: uang
-      width: 12.5
+      width: 12.50
     - click: kuai
       select: shengyun_initials
       label: uai
-      width: 12.5
+      width: 12.50
     - click: kui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_h:
     name: 韵母层-h
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: h
       select: shengyun_initials
       label: h
-      width: 12.5
+      width: 12.50
       functional: true
     - click: han
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ha
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: hao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: hai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: hen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: huan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: he
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: hua
       select: shengyun_initials
       label: ua
-      width: 12.5
+      width: 12.50
     - click: hou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: hei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: hu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: hang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: hong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: huo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: hun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: heng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: huang
       select: shengyun_initials
       label: uang
-      width: 12.5
+      width: 12.50
     - click: huai
       select: shengyun_initials
       label: uai
-      width: 12.5
+      width: 12.50
     - click: hui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_j:
     name: 韵母层-j
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: j
       select: shengyun_initials
       label: j
-      width: 12.5
+      width: 12.50
       functional: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ji
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jvan
       select: shengyun_initials
       label: van
-      width: 12.5
+      width: 12.50
     - click: jing
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jiao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jiong
       select: shengyun_initials
       label: iong
-      width: 12.5
+      width: 12.50
     - click: jiu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jia
       select: shengyun_initials
       label: ia
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: jv
       select: shengyun_initials
       label: v
-      width: 12.5
+      width: 12.50
     - click: jvn
       select: shengyun_initials
       label: vn
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jiang
       select: shengyun_initials
       label: iang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: jve
       select: shengyun_initials
       label: ve
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_q:
     name: 韵母层-q
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: q
       select: shengyun_initials
       label: q
-      width: 12.5
+      width: 12.50
       functional: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qvan
       select: shengyun_initials
       label: van
-      width: 12.5
+      width: 12.50
     - click: qing
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qiao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qiong
       select: shengyun_initials
       label: iong
-      width: 12.5
+      width: 12.50
     - click: qiu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qia
       select: shengyun_initials
       label: ia
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: qv
       select: shengyun_initials
       label: v
-      width: 12.5
+      width: 12.50
     - click: qvn
       select: shengyun_initials
       label: vn
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qiang
       select: shengyun_initials
       label: iang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: qve
       select: shengyun_initials
       label: ve
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_x:
     name: 韵母层-x
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: x
       select: shengyun_initials
       label: x
-      width: 12.5
+      width: 12.50
       functional: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xvan
       select: shengyun_initials
       label: van
-      width: 12.5
+      width: 12.50
     - click: xing
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xiao
       select: shengyun_initials
       label: iao
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xiong
       select: shengyun_initials
       label: iong
-      width: 12.5
+      width: 12.50
     - click: xiu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xia
       select: shengyun_initials
       label: ia
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: xv
       select: shengyun_initials
       label: v
-      width: 12.5
+      width: 12.50
     - click: xvn
       select: shengyun_initials
       label: vn
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xiang
       select: shengyun_initials
       label: iang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: xve
       select: shengyun_initials
       label: ve
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_zh:
     name: 韵母层-zh
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: zh
       select: shengyun_initials
       label: zh
-      width: 12.5
+      width: 12.50
       functional: true
     - click: zhan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zha
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zhao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: zhai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: zhi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: zhen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: zhuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zhe
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: zhua
       select: shengyun_initials
       label: ua
-      width: 12.5
+      width: 12.50
     - click: zhou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: zhei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: zhu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zhang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: zhong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zhuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zhun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: zheng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: zhuang
       select: shengyun_initials
       label: uang
-      width: 12.5
+      width: 12.50
     - click: zhuai
       select: shengyun_initials
       label: uai
-      width: 12.5
+      width: 12.50
     - click: zhui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_ch:
     name: 韵母层-ch
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: ch
       select: shengyun_initials
       label: ch
-      width: 12.5
+      width: 12.50
       functional: true
     - click: chan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cha
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: chao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: chai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: chi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: chen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: chuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: che
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: chua
       select: shengyun_initials
       label: ua
-      width: 12.5
+      width: 12.50
     - click: chou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: chu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: chang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: chong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: chuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: chun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: cheng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: chuang
       select: shengyun_initials
       label: uang
-      width: 12.5
+      width: 12.50
     - click: chuai
       select: shengyun_initials
       label: uai
-      width: 12.5
+      width: 12.50
     - click: chui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_sh:
     name: 韵母层-sh
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: sh
       select: shengyun_initials
       label: sh
-      width: 12.5
+      width: 12.50
       functional: true
     - click: shan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: sha
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: shao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: shai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: shi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: shen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: shuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: she
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: shua
       select: shengyun_initials
       label: ua
-      width: 12.5
+      width: 12.50
     - click: shou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: shei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: shu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: shang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: shuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: shun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: sheng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: shuang
       select: shengyun_initials
       label: uang
-      width: 12.5
+      width: 12.50
     - click: shuai
       select: shengyun_initials
       label: uai
-      width: 12.5
+      width: 12.50
     - click: shui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_r:
     name: 韵母层-r
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: r
       select: shengyun_initials
       label: r
-      width: 12.5
+      width: 12.50
       functional: true
     - click: ran
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: rao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ri
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: ren
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: ruan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: re
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: rua
       select: shengyun_initials
       label: ua
-      width: 12.5
+      width: 12.50
     - click: rou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ru
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: rang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: rong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ruo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: run
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: reng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: rui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_z:
     name: 韵母层-z
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: z
       select: shengyun_initials
       label: z
-      width: 12.5
+      width: 12.50
       functional: true
     - click: zan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: za
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: zai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: zi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: zen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: zuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ze
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: zei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: zu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: zong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: zeng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: zui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_c:
     name: 韵母层-c
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: c
       select: shengyun_initials
       label: c
-      width: 12.5
+      width: 12.50
       functional: true
     - click: can
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ca
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: cai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: ci
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: cen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: cuan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ce
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: cong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cuo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: ceng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: cui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_s:
     name: 韵母层-s
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: s
       select: shengyun_initials
       label: s
-      width: 12.5
+      width: 12.50
       functional: true
     - click: san
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: sa
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: sao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: sai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: si
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: sen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: suan
       select: shengyun_initials
       label: uan
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: se
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: sou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: su
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: sang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: song
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: suo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: sun
       select: shengyun_initials
       label: un
-      width: 12.5
+      width: 12.50
     - click: seng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: sui
       select: shengyun_initials
       label: ui
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_y:
     name: 韵母层-y
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: y
       select: shengyun_initials
       label: y
-      width: 12.5
+      width: 12.50
       functional: true
     - click: yan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: ya
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: yao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: yi
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: yvan
       select: shengyun_initials
       label: van
-      width: 12.5
+      width: 12.50
     - click: ying
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: ye
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: you
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: yin
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: yang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: yong
       select: shengyun_initials
       label: ong
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: yv
       select: shengyun_initials
       label: v
-      width: 12.5
+      width: 12.50
     - click: yvn
       select: shengyun_initials
       label: vn
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: yve
       select: shengyun_initials
       label: ve
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals_w:
     name: 韵母层-w
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: w
       select: shengyun_initials
       label: w
-      width: 12.5
+      width: 12.50
       functional: true
     - click: wan
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: wa
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: wo
       select: shengyun_initials
       label: o
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: wai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: wen
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: wei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: wu
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: wang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: weng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ' '
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
   shengyun_finals:
     name: 韵母层-全部
     author: gshmu
     ascii_mode: 0
-    width: 12.5
+    width: 100.00
     height: 70
     lock: true
+    once: true
     keys:
     - click: er
       label: er
-      width: 12.5
+      width: 12.50
       functional: true
     - click: an
       select: shengyun_initials
       label: an
-      width: 12.5
+      width: 12.50
     - click: ian
       select: shengyun_initials
       label: ian
-      width: 12.5
+      width: 12.50
     - click: a
       select: shengyun_initials
       label: a
-      width: 12.5
+      width: 12.50
     - click: o
       select: shengyun_initials
       label: o
-      width: 12.5
+      width: 12.50
     - click: ie
       select: shengyun_initials
       label: ie
-      width: 12.5
+      width: 12.50
     - click: ao
       select: shengyun_initials
       label: ao
-      width: 12.5
+      width: 12.50
     - click: ai
       select: shengyun_initials
       label: ai
-      width: 12.5
+      width: 12.50
     - click: i
       select: shengyun_initials
       label: i
-      width: 12.5
+      width: 12.50
     - click: en
       select: shengyun_initials
       label: en
-      width: 12.5
+      width: 12.50
     - click: van
       long_click: uan
       label: van
-      width: 12.5
+      width: 12.50
     - click: ing
       select: shengyun_initials
       label: ing
-      width: 12.5
+      width: 12.50
     - click: e
       select: shengyun_initials
       label: e
-      width: 12.5
+      width: 12.50
     - click: ua
       long_click: iao
       label: ua
-      width: 12.5
+      width: 12.50
     - click: ou
       select: shengyun_initials
       label: ou
-      width: 12.5
+      width: 12.50
     - click: ei
       select: shengyun_initials
       label: ei
-      width: 12.5
+      width: 12.50
     - click: u
       select: shengyun_initials
       label: u
-      width: 12.5
+      width: 12.50
     - click: in
       select: shengyun_initials
       label: in
-      width: 12.5
+      width: 12.50
     - click: ang
       select: shengyun_initials
       label: ang
-      width: 12.5
+      width: 12.50
     - click: iong
       long_click: ong
       label: iong
-      width: 12.5
+      width: 12.50
     - click: iu
       select: shengyun_initials
       label: iu
-      width: 12.5
+      width: 12.50
     - click: uo
       select: shengyun_initials
       label: uo
-      width: 12.5
+      width: 12.50
     - click: ia
       select: shengyun_initials
       label: ia
-      width: 12.5
+      width: 12.50
     - click: Keyboard_shengyun_initials
       label: ⇧
-      width: 12.5
+      width: 12.50
       send_bindings: false
       hilited: true
     - click: v
       select: shengyun_initials
       label: v
-      width: 12.5
+      width: 12.50
     - click: vn
       long_click: un
       label: vn
-      width: 12.5
+      width: 12.50
     - click: eng
       select: shengyun_initials
       label: eng
-      width: 12.5
+      width: 12.50
     - click: uang
       long_click: iang
       label: uang
-      width: 12.5
+      width: 12.50
     - click: uai
       select: shengyun_initials
       label: uai
-      width: 12.5
+      width: 12.50
     - click: ve
       long_click: ui
       label: ve
-      width: 12.5
+      width: 12.50
     - click: space
       label: ␣
-      width: 12.5
+      width: 12.50
     - click: BackSpace
       label: ⌫
-      width: 12.5
+      width: 12.50
       repeat: true
 preset_keys:
   IME_switch:
@@ -3355,7 +3380,7 @@ preset_keys:
     send: Eisu_toggle
     select: shengyun_initials
   Keyboard_shengyun_finals:
-    label: ' '
+    label: finals
     send: Eisu_toggle
     select: shengyun_finals
   Keyboard_shengyun_finals_b:

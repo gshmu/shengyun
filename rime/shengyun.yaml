@@ -1,0 +1,28 @@
+# 声韵输入法 - 声母韵母映射表
+# 基于 pinyin.tsv 生成，包含23个声母的可用韵母列表
+shengyun:
+  finals_map:
+    b: [a, o, ai, an, ang, ao, ei, en, eng, i, ian, iao, ie, in, ing, u]
+    p: [a, o, ai, an, ang, ao, ei, en, eng, i, ian, iao, ie, in, ing, ou, u]
+    m: [a, e, o, ai, an, ang, ao, ei, en, eng, i, ian, iao, ie, in, ing, iu, ou, u]
+    f: [a, o, an, ang, ei, en, eng, ou, u]
+    d: [a, e, ai, an, ang, ao, ei, en, eng, i, ia, ian, iao, ie, ing, iu, ong, ou, u, uan, ui, un, uo]
+    t: [a, e, ai, an, ang, ao, ei, eng, i, ian, iao, ie, ing, ong, ou, u, uan, ui, un, uo]
+    n: [a, e, ai, an, ang, ao, ei, en, eng, i, ian, iang, iao, ie, in, ing, iu, ong, ou, u, uan, un, uo, v, ve]
+    l: [a, e, ai, an, ang, ao, ei, eng, i, ia, ian, iang, iao, ie, in, ing, iu, ong, ou, u, uan, un, uo, v, ve]
+    g: [a, e, ai, an, ang, ao, ei, en, eng, ong, ou, u, ua, uai, uan, uang, ui, un, uo]
+    k: [a, e, ai, an, ang, ao, ei, en, eng, ong, ou, u, ua, uai, uan, uang, ui, un, uo]
+    h: [a, e, ai, an, ang, ao, ei, en, eng, ong, ou, u, ua, uai, uan, uang, ui, un, uo]
+    j: [i, ia, ian, iang, iao, ie, in, ing, iong, iu, v, van, ve, vn]
+    q: [i, ia, ian, iang, iao, ie, in, ing, iong, iu, v, van, ve, vn]
+    x: [i, ia, ian, iang, iao, ie, in, ing, iong, iu, v, van, ve, vn]
+    zh: [a, e, ai, an, ang, ao, ei, en, eng, i, ong, ou, u, ua, uai, uan, uang, ui, un, uo]
+    ch: [a, e, ai, an, ang, ao, en, eng, i, ong, ou, u, ua, uai, uan, uang, ui, un, uo]
+    sh: [a, e, ai, an, ang, ao, ei, en, eng, i, ou, u, ua, uai, uan, uang, ui, un, uo]
+    r: [e, an, ang, ao, en, eng, i, ong, ou, u, ua, uan, ui, un, uo]
+    z: [a, e, ai, an, ang, ao, ei, en, eng, i, ong, ou, u, uan, ui, un, uo]
+    c: [a, e, ai, an, ang, ao, en, eng, i, ong, ou, u, uan, ui, un, uo]
+    s: [a, e, ai, an, ang, ao, en, eng, i, ong, ou, u, uan, ui, un, uo]
+    y: [a, e, an, ang, ao, i, in, ing, ong, ou, v, van, ve, vn]
+    w: [a, o, ai, an, ang, ei, en, eng, u]
+    zero: [a, e, o, ai, an, ang, ao, ei, en, eng, er, ou]

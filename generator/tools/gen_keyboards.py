@@ -1,11 +1,31 @@
 #!/usr/bin/env python3
 """
-声韵输入法生成器：从 pinyin.tsv 和 finals_all.csv 更新 shengyun.trime.yaml
+声韵输入法键盘配置生成器
+
+【功能】根据声母-韵母映射表生成26个键盘配置
+【输入】pinyin.tsv + finals_all.csv
+【输出】rime/shengyun.trime.yaml
+【使用】cd generator && python3 tools/gen_keyboards.py
+
+核心逻辑：
+- 从 pinyin.tsv 读取每个声母的可用韵母
+- 从 finals_all.csv 读取韵母布局模板（4×11网格）
+- 交叉生成23个韵母键盘（含once参数）
+- 键位宽度自动计算：100 / 列数
 """
 
 import csv
 import yaml
 from pathlib import Path
+
+# 自定义格式化器：强制宽度保留两位小数
+class WidthFloat(float):
+    pass
+
+def represent_width_float(dumper, data):
+    return dumper.represent_scalar('tag:yaml.org,2002:float', f"{data:.2f}")
+
+yaml.add_representer(WidthFloat, represent_width_float)
 
 ROOT_DIR = Path(__file__).parent.parent.parent
 TSV_FILE = Path(__file__).parent.parent / 'pinyin.tsv'
@@ -111,30 +131,32 @@ def generate_keyboard_dict(initial, layout_rows, available_finals_set):
     keys = []
 
     for row_idx, row in enumerate(layout_rows, 1):
+        # 每行用自己的宽度（根据该行列数计算）
+        width = f"{(10000 // len(row) / 100):g}"
         for col_idx, final_options in enumerate(row, 1):
             # 第1行第1个按钮：显示声母（零声母显示 er）
             if row_idx == 1 and col_idx == 1:
                 if initial == 'zero':
-                    keys.append({'click': 'er', 'select': 'shengyun_initials', 'label': 'er', 'width': 12.5})
+                    keys.append({'click': 'er', 'select': 'shengyun_initials', 'label': 'er', 'width': width})
                 else:
-                    keys.append({'click': initial, 'select': 'shengyun_initials', 'label': initial, 'width': 12.5, 'functional': True})
+                    keys.append({'click': initial, 'select': 'shengyun_initials', 'label': initial, 'width': width, 'functional': True})
                 continue
 
             # 特殊控制键
             if final_options == '⇧':
                 if initial == 'zero':
-                    keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 12.5, 'send_bindings': False, 'hilited': True})
+                    keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': width, 'send_bindings': False, 'hilited': True})
                 else:
-                    keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 12.5, 'send_bindings': False, 'hilited': True})
+                    keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': width, 'send_bindings': False, 'hilited': True})
                 continue
             elif final_options == '␣':
-                keys.append({'click': 'space', 'label': '␣', 'width': 12.5})
+                keys.append({'click': 'space', 'label': '␣', 'width': width})
                 continue
             elif final_options == '⌫':
-                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': 12.5, 'repeat': True})
+                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': width, 'repeat': True})
                 continue
             elif final_options == '':
-                keys.append({'click': 'space', 'label': ' ', 'width': 12.5})
+                keys.append({'click': 'space', 'label': ' ', 'width': width})
                 continue
 
             # 普通韵母按钮：选择适用的韵母
@@ -142,18 +164,19 @@ def generate_keyboard_dict(initial, layout_rows, available_finals_set):
 
             if selected_final:
                 click_value = convert_final_for_click(selected_final, initial)
-                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': selected_final, 'width': 12.5})
+                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': selected_final, 'width': width})
             else:
                 # 不可用韵母：显示空格
-                keys.append({'click': 'space', 'label': ' ', 'width': 12.5})
+                keys.append({'click': 'space', 'label': ' ', 'width': width})
 
     return {
         'name': f'韵母层-{initial}',
         'author': 'gshmu',
         'ascii_mode': 0,
-        'width': 12.5,
+        'width': 100,  # 总宽度 100%
         'height': 70,
         'lock': True,
+        'once': True,  # 添加 once 参数
         'keys': keys
     }
 
@@ -163,39 +186,42 @@ def generate_universal_finals_dict(layout_rows):
     keys = []
 
     for row_idx, row in enumerate(layout_rows, 1):
+        # 每行用自己的宽度（根据该行列数计算）
+        width = f"{(10000 // len(row) / 100):g}"
         for col_idx, final_options in enumerate(row, 1):
             if row_idx == 1 and col_idx == 1:
-                keys.append({'click': 'er', 'label': 'er', 'width': 12.5, 'functional': True})
+                keys.append({'click': 'er', 'label': 'er', 'width': width, 'functional': True})
                 continue
 
             if final_options == '⇧':
-                keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': 12.5, 'send_bindings': False, 'hilited': True})
+                keys.append({'click': 'Keyboard_shengyun_initials', 'label': '⇧', 'width': width, 'send_bindings': False, 'hilited': True})
                 continue
             elif final_options == '␣':
-                keys.append({'click': 'space', 'label': '␣', 'width': 12.5})
+                keys.append({'click': 'space', 'label': '␣', 'width': width})
                 continue
             elif final_options == '⌫':
-                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': 12.5, 'repeat': True})
+                keys.append({'click': 'BackSpace', 'label': '⌫', 'width': width, 'repeat': True})
                 continue
             elif final_options == '':
-                keys.append({'click': 'space', 'label': ' ', 'width': 12.5})
+                keys.append({'click': 'space', 'label': ' ', 'width': width})
                 continue
 
             # 互斥韵母
             if isinstance(final_options, list):
                 long, short  = final_options
-                keys.append({'click': short, 'long_click': long, 'label': short, 'width': 12.5})
+                keys.append({'click': short, 'long_click': long, 'label': short, 'width': width})
             else:
                 click_value = final_options.replace('ü', 'v')
-                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': final_options, 'width': 12.5})
+                keys.append({'click': click_value, 'select': 'shengyun_initials', 'label': final_options, 'width': width})
 
     return {
         'name': '韵母层-全部',
         'author': 'gshmu',
         'ascii_mode': 0,
-        'width': 12.5,
+        'width': 100,  # 总宽度 100%
         'height': 70,
         'lock': True,
+        'once': True,  # 添加 once 参数
         'keys': keys
     }
 
@@ -228,8 +254,38 @@ def update_trime_yaml(initial_finals, layout_rows):
     # 3. 通用韵母全览层
     filtered_keyboards['shengyun_finals'] = generate_universal_finals_dict(layout_rows)
 
+    # 添加声母键盘（如果不存在则生成空壳，如果存在则保留）
+    if 'shengyun_initials' not in filtered_keyboards:
+        # 生成声母键盘（这里需要调用生成函数，为了简化先留空壳）
+        filtered_keyboards['shengyun_initials'] = generate_initials_keyboard()
+
     # 更新配置
     trime['preset_keyboards'] = filtered_keyboards
+
+    # 添加预设键盘切换键（Keyboard_*）
+    preset_keys = trime.get('preset_keys', {})
+    for initial in initials_order + ['zero', 'finals']:
+        key_name = f'Keyboard_shengyun_finals_{initial}' if initial != 'finals' else 'Keyboard_shengyun_finals'
+        preset_keys[key_name] = {
+            'label': initial if initial != 'zero' else '⇧',
+            'send': 'Eisu_toggle',
+            'select': f'shengyun_finals_{initial}' if initial != 'finals' else 'shengyun_finals'
+        }
+    # 声母键盘切换
+    preset_keys['Keyboard_shengyun_initials'] = {
+        'label': '声母',
+        'send': 'Eisu_toggle',
+        'select': 'shengyun_initials'
+    }
+    trime['preset_keys'] = preset_keys
+
+    # 转换所有宽度为 WidthFloat（强制保留两位小数）
+    for kb in trime['preset_keyboards'].values():
+        if 'width' in kb:
+            kb['width'] = WidthFloat(kb['width'])
+        for key in kb.get('keys', []):
+            if 'width' in key:
+                key['width'] = WidthFloat(key['width'])
 
     # 写回文件
     with open(TRIME_FILE, 'w', encoding='utf-8') as f:

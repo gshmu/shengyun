@@ -1,0 +1,31 @@
+# 声韵输入法 - 韵母布局模板
+# 4行 × 11列 网格布局，每个格子对应一个韵母位置
+# 特殊标记：⇧=返回声母, ␣=空格, ⌫=退格, ""=空位置
+# 互斥韵母：用数组表示，如 [un, vn] 表示这两个韵母共享同一格子
+
+layout_template:
+  # 第1行：单韵母及相关组合
+  - ["er", "an", "ian", "a", "o", "ie", "ao", "ai"]
+  # 第2行：前鼻音、后鼻音、复韵母
+  - ["i", "en", ["uan", "van"], "ing", "e", ["iao", "ua"], "ou", "ei"]
+  # 第3行：u系列韵母
+  - ["u", "in", "ang", ["ong", "iong"], "iu", "uo", "ia", "⇧"]
+  # 第4行：ü系列韵母、eng、组合韵母、功能键
+  - ["v", ["un", "vn"], "eng", ["iang", "uang"], "uai", ["ui", "ve"], "␣", "⌫"]
+
+# 功能键定义（所有声母键盘通用）
+function_keys:
+  ⇧:
+    label: "⇧"
+    width: 12.5
+    send_bindings: false
+    hilited: true
+  "␣":
+    label: "␣"
+    action: space
+    width: 12.5
+  "⌫":
+    label: "⌫"
+    action: backspace
+    width: 12.5
+    repeat: true
